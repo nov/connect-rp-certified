@@ -10,6 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20170117095523) do
+
+  create_table "clients", force: :cascade do |t|
+    t.integer  "test_case_id"
+    t.string   "identifier",   null: false
+    t.string   "secret",       null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.index ["identifier"], name: "index_clients_on_identifier", unique: true
+    t.index ["test_case_id"], name: "index_clients_on_test_case_id"
+  end
+
+  create_table "test_cases", force: :cascade do |t|
+    t.string   "identifier", null: false
+    t.string   "issuer",     null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["identifier"], name: "index_test_cases_on_identifier", unique: true
+    t.index ["issuer"], name: "index_test_cases_on_issuer", unique: true
+  end
 
 end

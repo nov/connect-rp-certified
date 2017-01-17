@@ -7,23 +7,23 @@
       <span class="image">
         <%= image_tag 'pic01.jpg' %>
       </span>
-      <a href="#TODO">
+      <%= link_to test_case_path('rp-response_type-code') do %>
         <h2>rp-response_type-code</h2>
         <div class="content">
           <p>Make an authentication request using the Authorization Code Flow.</p>
         </div>
-      </a>
+      <% end %>
     </article>
     <article class="style2">
       <span class="image">
         <%= image_tag 'pic02.jpg' %>
       </span>
-      <a href="#TODO">
+      <%= link_to test_case_path('rp-scope-userinfo-claims') do %>
         <h2>rp-scope-userinfo-claims</h2>
         <div class="content">
           <p>Request claims using scope values.</p>
         </div>
-      </a>
+      <% end %>
     </article>
     <article class="style3">
       <span class="image">
