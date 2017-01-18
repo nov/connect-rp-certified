@@ -17,6 +17,7 @@ gem 'openid_connect'
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'sqlite3'
+  gem 'tunnelss'
 end
 
 group :development do
