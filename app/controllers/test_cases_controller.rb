@@ -1,15 +1,18 @@
 class TestCasesController < ApplicationController
   def show
-    test_case = TestCase.find_or_create_by!(identifier: params[:id])
-    # TODO:
-    # client = test_case.register_client!
+    client = TestCase.register_client!(
+      params[:id],
+      redirect_uri: test_case_callback_url(params[:id], protocol: :https)
+    )
 
-    case test_case.identifier
-    when 'foo'
-    when 'bar'
-    else
-      # redirect_to client.authorization_uri(...)
-    end
-    render text: test_case.issuer
+    session[:client_id] = client.identifier
+    session[:state] = SecureRandom.hex(16)
+    session[:nonce] = SecureRandom.hex(16)
+
+    redirect_to client.authorization_uri(
+      state: session[:state],
+      nonce: session[:nonce],
+      scope: [:profile, :email, :address, :phone]
+    )
   end
 end

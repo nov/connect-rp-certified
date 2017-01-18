@@ -17,3 +17,10 @@
 //= require main
 //= require util
 //= require_tree .
+
+$(function () {
+  $('a[data-popup=true]').click(function() {
+    window.open(this.href, 'popup', 'width=800, height=600');
+    return false;
+  });
+});
