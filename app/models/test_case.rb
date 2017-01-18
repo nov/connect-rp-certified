@@ -39,7 +39,7 @@ class TestCase < ApplicationRecord
       validate_token_request! options
     end
     user_info = if access_token.present?
-      access_token.userinfo!
+      validate_user_info! access_token, id_token, options
     end
     [access_token, id_token, id_token_jwt, user_info]
   end
@@ -51,14 +51,52 @@ class TestCase < ApplicationRecord
     client = client.agent_for config, options
     client.authorization_code = options[:code]
     access_token = client.access_token!
-    id_token = OpenIDConnect::ResponseObject::IdToken.decode access_token.id_token, config.jwks
+    id_token, id_token_jwt = validate_id_token! access_token.id_token, config.jwks, options
+    [access_token, id_token, id_token_jwt]
+  end
+
+  def validate_id_token!(id_token_string, jwks, options = {})
+    id_token_jwt = JSON::JWT.decode id_token_string, :skip_verification
+    id_token = if id_token_jwt.header[:alg] == 'none'
+      OpenIDConnect::ResponseObject::IdToken.decode id_token_string, :skip_verification
+    else
+      jwk_or_jwks = if id_token_jwt.header[:kid].present?
+        jwks
+      else
+        expectd_kty = case id_token_jwt.header[:alg]
+        when /RS/
+          'RSA'
+        when /ES/
+          'EC'
+        end
+        jwks_selected = jwks.select do |jwk|
+          jwk[:use] == 'sig' && jwk[:kty] == expectd_kty
+        end
+        case jwks_selected.size
+        when 0
+          raise JSON::JWK::Set::KidNotFound, "No keys are found for kyt=#{expectd_kty} & use=sig"
+        when 1
+          jwks.first
+        else
+          raise JSON::JWK::Set::KidNotFound, "Multiple keys are found for kyt=#{expectd_kty} & use=sig"
+        end
+      end
+      OpenIDConnect::ResponseObject::IdToken.decode id_token_string, jwk_or_jwks
+    end
     id_token.verify!(
       issuer:   issuer,
       audience: options[:client_id],
       nonce:    options[:nonce]
     )
-    id_token_jwt = JSON::JWT.decode access_token.id_token, config.jwks
-    [access_token, id_token, id_token_jwt]
+    [id_token, id_token_jwt]
+  end
+
+  def validate_user_info!(access_token, id_token, options = {})
+    user_info = access_token.userinfo!
+    if id_token.sub != user_info.sub
+      raise OpenIDConnect::Exception, '"sub" mismatch between ID Token and UserInfo'
+    end
+    user_info
   end
 
   def config
