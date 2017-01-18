@@ -7,7 +7,7 @@ class TestCaseCallbacksController < ApplicationController
       client_id:    session[:client_id],
       nonce:        session[:nonce],
       code:         params[:code],
-      redirect_uri: test_case_callback_url(params[:id], protocol: :https)
+      redirect_uri: test_case_callback_url(params[:id])
     )
   end
 

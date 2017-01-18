@@ -2,7 +2,7 @@ class TestCasesController < ApplicationController
   def show
     client = TestCase.register_client!(
       params[:id],
-      redirect_uri: test_case_callback_url(params[:id], protocol: :https)
+      redirect_uri: test_case_callback_url(params[:id])
     )
 
     session[:client_id] = client.identifier
