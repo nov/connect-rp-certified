@@ -1,6 +1,6 @@
 class TestCase < ApplicationRecord
   RP_CERTIFICATION_SITE = 'https://rp.certification.openid.net:8080'
-  RP_IDENTIFIER = 'nov-rp-certified'
+  RP_IDENTIFIER = ENV['RP_IDENTIFIER'] || 'nov-rp-certified'
 
   has_many :clients
 
