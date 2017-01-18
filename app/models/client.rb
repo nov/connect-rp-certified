@@ -1,6 +1,9 @@
 class Client < ApplicationRecord
   belongs_to :test_case
 
+  validates :identifier, presence: true, uniqueness: true
+  validates :secret,     presence: true
+
   def agent_for(config, options = {})
     OpenIDConnect::Client.new(
       identifier:             identifier,
