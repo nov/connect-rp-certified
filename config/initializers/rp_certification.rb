@@ -11,7 +11,7 @@ else
 end
 
 Rails.application.config.rp_ceritification = {
-  certified: ENV['RP_CERTIFIED'],
+  certified: ENV['RP_CERTIFIED'].present?,
   idp_base_url: 'https://rp.certification.openid.net:8080',
   rp_identifier: rp_identifier
 }
