@@ -5,26 +5,33 @@
 
   <section>
     <header>
-      <h3>Response Params</h3>
+      <h3>Authorization Response</h3>
     </header>
     <dl>
       <dt>Query Params</dt>
       <dd><pre><%= JSON.pretty_generate request.query_parameters %></pre></dd>
       <dt>Fragment Params</dt>
-      <dd><i>TODO: write JS code. (BTW, do I need client-side tests for my gem??)</i></dd>
+      <dd><pre>TODO: write JS code. (BTW, do I need client-side tests for my gem??)</pre></dd>
     </dl>
   </section>
 
   <section>
     <header>
-      <h3>Fetched on Server-side</h3>
+      <h3>Token Response</h3>
     </header>
     <dl>
       <dt>Access Token</dt>
-      <dd><%= @access_token.access_token %></dd>
+      <dd><pre><%= @access_token.access_token %></pre></dd>
       <dt>ID Token</dt>
-      <dd><pre><%= JSON.pretty_generate @id_token_jwt.header %></pre></dd>
-      <dd><pre><%= JSON.pretty_generate @id_token_jwt %></pre></dd>
+      <dd><pre><%= JSON.pretty_generate @id_token_jwt.header %><br /><%= JSON.pretty_generate @id_token_jwt %></pre></dd>
+    </dl>
+  </section>
+
+  <section>
+    <header>
+      <h3>UserInfo Response</h3>
+    </header>
+    <dl>
       <dt>User Info</dt>
       <dd><pre><%= JSON.pretty_generate @user_info.raw_attributes %></pre></dd>
     </dl>
