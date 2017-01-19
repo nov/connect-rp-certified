@@ -60,22 +60,23 @@ class TestCase < ApplicationRecord
       jwk_or_jwks = if id_token_jwt.header[:kid].present?
         jwks
       else
-        expectd_kty = case id_token_jwt.header[:alg]
+        expected_kty = case id_token_jwt.header[:alg]
         when /RS/
           'RSA'
         when /ES/
           'EC'
         end
         jwks_selected = jwks.select do |jwk|
-          jwk[:use] == 'sig' && jwk[:kty] == expectd_kty
+          logger.info "#{jwk[:use]} - #{jwk[:kty]}"
+          jwk[:use] == 'sig' && jwk[:kty] == expected_kty
         end
         case jwks_selected.size
         when 0
-          raise JSON::JWK::Set::KidNotFound, "No keys are found for kyt=#{expectd_kty} & use=sig"
+          raise JSON::JWK::Set::KidNotFound, "No keys are found for kyt=#{expected_kty} & use=sig"
         when 1
-          jwks.first
+          jwks_selected.first
         else
-          raise JSON::JWK::Set::KidNotFound, "Multiple keys are found for kyt=#{expectd_kty} & use=sig"
+          raise JSON::JWK::Set::KidNotFound, "Multiple keys are found for kyt=#{expected_kty} & use=sig"
         end
       end
       OpenIDConnect::ResponseObject::IdToken.decode id_token_string, jwk_or_jwks
