@@ -7,10 +7,120 @@
       <span class="image">
         <%= image_tag 'pic01.jpg' %>
       </span>
-      <%= link_to '#TODO' do %>
-        <h2>TODO</h2>
+      <%= link_to test_case_path('rp-discovery-jwks_uri-keys'), data: {popup: true} do %>
+        <h2>rp-discovery-jwks_uri-keys</h2>
         <div class="content">
-          <p>TODO</p>
+          <p>The Relying Party uses keys from the jwks_uri which has been obtained from the OpenID Provider Metadata.</p>
+        </div>
+      <% end %>
+    </article>
+    <article class="style2">
+      <span class="image">
+        <%= image_tag 'pic02.jpg' %>
+      </span>
+      <%= link_to test_case_path('rp-discovery-webfinger-acct'), data: {popup: true} do %>
+        <h2>rp-discovery-webfinger-acct</h2>
+        <div class="content">
+          <p>Use WebFinger (RFC7033) and OpenID Provider Issuer Discovery to determine the location of the OpenID Provider. The discovery should be done using acct URI syntax as user input identifier. Note that the local part of the acct value should adhere to the pattern.</p>
+        </div>
+      <% end %>
+    </article>
+    <article class="style3">
+      <span class="image">
+        <%= image_tag 'pic03.jpg' %>
+      </span>
+      <%= link_to test_case_path('rp-discovery-issuer-not-matching-config'), data: {popup: true} do %>
+        <h2>rp-discovery-issuer-not-matching-config</h2>
+        <div class="content">
+          <p>Retrieve OpenID Provider Configuration Information for OpenID Provider from the .well-known/openid-configuration path. Verify that the issuer in the provider configuration matches the one returned by WebFinger.</p>
+        </div>
+      <% end %>
+    </article>
+    <article class="style4">
+      <span class="image">
+        <%= image_tag 'pic04.jpg' %>
+      </span>
+      <%= link_to test_case_path('rp-discovery-webfinger-url'), data: {popup: true} do %>
+        <h2>rp-discovery-webfinger-url</h2>
+        <div class="content">
+          <p>Use WebFinger (RFC7033) and OpenID Provider Issuer Discovery to determine the location of the OpenID Provider. The discovery should be done using URL syntax as user input identifier.</p>
+        </div>
+      <% end %>
+    </article>
+    <article class="style5">
+      <span class="image">
+        <%= image_tag 'pic05.jpg' %>
+      </span>
+      <%= link_to test_case_path('rp-discovery-openid-configuration'), data: {popup: true} do %>
+        <h2>rp-discovery-openid-configuration</h2>
+        <div class="content">
+          <p>Retrieve and use the OpenID Provider Configuration Information.</p>
+        </div>
+      <% end %>
+    </article>
+    <article class="style6">
+      <span class="image">
+        <%= image_tag 'pic06.jpg' %>
+      </span>
+      <%= link_to test_case_path('rp-registration-dynamic'), data: {popup: true} do %>
+        <h2>rp-registration-dynamic</h2>
+        <div class="content">
+          <p>Use the client registration endpoint in order to dynamically register the Relying Party.</p>
+        </div>
+      <% end %>
+    </article>
+    <article class="style3">
+      <span class="image">
+        <%= image_tag 'pic07.jpg' %>
+      </span>
+      <%= link_to test_case_path('rp-request_uri-sig'), data: {popup: true} do %>
+        <h2>rp-request_uri-sig</h2>
+        <div class="content">
+          <p>Pass a Request Object by Reference, using the request_uri parameter. Sign the Request Object using the 'RS256' algorithm.</p>
+        </div>
+      <% end %>
+    </article>
+    <article class="style2">
+      <span class="image">
+        <%= image_tag 'pic08.jpg' %>
+      </span>
+      <%= link_to test_case_path('rp-request_uri-unsigned'), data: {popup: true} do %>
+        <h2>rp-request_uri-unsigned</h2>
+        <div class="content">
+          <p>Pass a Request Object by Reference, using the request_uri parameter. The Request Object should be signed using the algorithm 'none' (Unsecured JWS).</p>
+        </div>
+      <% end %>
+    </article>
+    <article class="style4">
+      <span class="image">
+        <%= image_tag 'pic09.jpg' %>
+      </span>
+      <%= link_to test_case_path('rp-id_token-sig-none'), data: {popup: true} do %>
+        <h2>rp-id_token-sig-none</h2>
+        <div class="content">
+          <p>Use Code Flow and retrieve an unsigned ID Token.</p>
+        </div>
+      <% end %>
+    </article>
+    <article class="style2">
+      <span class="image">
+        <%= image_tag 'pic10.jpg' %>
+      </span>
+      <%= link_to test_case_path('rp-key-rotation-op-sign-key'), data: {popup: true} do %>
+        <h2>rp-key-rotation-op-sign-key</h2>
+        <div class="content">
+          <p>Request an ID Token and verify its signature. Make a new authentication and retrieve another ID Token and verify its signature.</p>
+        </div>
+      <% end %>
+    </article>
+    <article class="style1">
+      <span class="image">
+        <%= image_tag 'pic10.jpg' %>
+      </span>
+      <%= link_to test_case_path('rp-userinfo-sig'), data: {popup: true} do %>
+        <h2>rp-userinfo-sig</h2>
+        <div class="content">
+          <p>Request signed UserInfo.</p>
         </div>
       <% end %>
     </article>
