@@ -1,5 +1,5 @@
 class TestCaseCallbacksController < ApplicationController
-  layout :popup
+  layout 'popup'
 
   before_action :reject_csrf
 
