@@ -42,7 +42,7 @@ GEM
       public_suffix (~> 2.0, >= 2.0.2)
     arel (7.1.4)
     attr_required (1.0.1)
-    bindata (2.3.4)
+    bindata (2.3.5)
     builder (3.2.3)
     byebug (9.0.6)
     coffee-rails (4.2.1)
@@ -95,7 +95,7 @@ GEM
     nio4r (1.2.1)
     nokogiri (1.7.0.1)
       mini_portile2 (~> 2.1.0)
-    openid_connect (1.0.2)
+    openid_connect (1.0.3)
       activemodel
       attr_required (>= 1.0.0)
       json (>= 1.4.3)

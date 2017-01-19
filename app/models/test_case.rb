@@ -67,7 +67,6 @@ class TestCase < ApplicationRecord
           'EC'
         end
         jwks_selected = jwks.select do |jwk|
-          logger.info "#{jwk[:use]} - #{jwk[:kty]}"
           jwk[:use] == 'sig' && jwk[:kty] == expected_kty
         end
         case jwks_selected.size
