@@ -1,11 +1,14 @@
-.certification_mark {
-  img {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    height: 40px;
-    z-index: 10000;
-    background: #fff;
+#footer {
+  padding-bottom: 2em !important;
+  .certification_mark {
+    img {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      height: 40px;
+      z-index: 10000;
+      background: #fff;
+    }
   }
 }
 
