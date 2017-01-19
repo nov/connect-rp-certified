@@ -1,7 +1,4 @@
 class TestCase < ApplicationRecord
-  RP_CERTIFICATION_SITE = 'https://rp.certification.openid.net:8080'
-  RP_IDENTIFIER = ENV['RP_IDENTIFIER'] || 'nov-rp-certified'
-
   has_many :clients
 
   before_validation :setup, on: :create
@@ -105,7 +102,11 @@ class TestCase < ApplicationRecord
 
   def setup
     self.issuer = if identifier
-      File.join(RP_CERTIFICATION_SITE, RP_IDENTIFIER, identifier)
+      File.join(
+        Rails.application.config.rp_ceritification[:idp_base_url],
+        Rails.application.config.rp_ceritification[:rp_identifier],
+        identifier
+      )
     end
   end
 end

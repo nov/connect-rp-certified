@@ -1,4 +1,6 @@
 class TestCaseCallbacksController < ApplicationController
+  layout :popup
+
   before_action :reject_csrf
 
   def show

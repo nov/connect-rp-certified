@@ -150,25 +150,29 @@
 				.on('click', function(event) {
 					event.stopPropagation();
 				})
-				.on('click', 'a', function(event) {
-
-					var href = $(this).attr('href');
-
-					event.preventDefault();
-					event.stopPropagation();
-
-					// Hide.
-						$menu._hide();
-
-					// Redirect.
-						if (href == '#menu')
-							return;
-
-						window.setTimeout(function() {
-							window.location.href = href;
-						}, 350);
-
-				})
+				// .on('click', 'a', function(event) {
+        //
+				// 	var href = $(this).attr('href');
+        //
+				// 	event.preventDefault();
+				// 	event.stopPropagation();
+        //
+				// 	// Hide.
+				// 		$menu._hide();
+        //
+				// 	// Redirect.
+				// 		if (href == '#menu')
+				// 			return;
+        //
+				// 		window.setTimeout(function() {
+				// 			window.location.href = href;
+				// 		}, 350);
+        //
+				// })
+        .on('click', 'a.close', function (event) {
+          $menu._hide();
+          return false;
+        })
 				.append('<a class="close" href="#menu">Close</a>');
 
 			$body

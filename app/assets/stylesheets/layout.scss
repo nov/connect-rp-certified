@@ -1,0 +1,25 @@
+.certification_mark {
+  img {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    height: 40px;
+    z-index: 10000;
+    background: #fff;
+  }
+}
+
+#wrapper.popup {
+  #header {
+    padding: 4em 0 2em;
+  }
+  #footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 2em 0;
+    ul {
+      margin: 0;
+    }
+  }
+}

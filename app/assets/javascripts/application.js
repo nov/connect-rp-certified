@@ -20,7 +20,7 @@
 
 $(function () {
   $('a[data-popup=true]').click(function() {
-    window.open(this.href, 'popup', 'width=800, height=600');
+    window.open(this.href, 'popup', 'width=800');
     return false;
   });
 });

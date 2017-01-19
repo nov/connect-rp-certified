@@ -1,4 +1,6 @@
 class TestCasesController < ApplicationController
+  layout 'popup'
+
   def show
     client = TestCase.register_client!(
       params[:id],
