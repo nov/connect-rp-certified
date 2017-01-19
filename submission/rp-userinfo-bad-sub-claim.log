@@ -1,0 +1,142 @@
+2017-01-19T16:00:22.027542+00:00 app[web.1]: I, [2017-01-19T16:00:22.027383 #4]  INFO -- : [7ac4fbe9-8268-4535-8c46-c5de6015afc7] Started GET "/test_cases/rp-userinfo-bad-sub-claim" for 122.210.153.65 at 2017-01-19 16:00:22 +0000
+2017-01-19T16:00:22.028823+00:00 app[web.1]: I, [2017-01-19T16:00:22.028720 #4]  INFO -- : [7ac4fbe9-8268-4535-8c46-c5de6015afc7] Processing by TestCasesController#show as HTML
+2017-01-19T16:00:22.028897+00:00 app[web.1]: I, [2017-01-19T16:00:22.028837 #4]  INFO -- : [7ac4fbe9-8268-4535-8c46-c5de6015afc7]   Parameters: {"id"=>"rp-userinfo-bad-sub-claim"}
+2017-01-19T16:00:22.035049+00:00 app[web.1]: D, [2017-01-19T16:00:22.034579 #4] DEBUG -- : [7ac4fbe9-8268-4535-8c46-c5de6015afc7]   TestCase Load (0.9ms)  SELECT  "test_cases".* FROM "test_cases" WHERE "test_cases"."identifier" = $1 LIMIT $2  [["identifier", "rp-userinfo-bad-sub-claim"], ["LIMIT", 1]]
+2017-01-19T16:00:22.041059+00:00 app[web.1]: I, [2017-01-19T16:00:22.040947 #4]  INFO -- : [7ac4fbe9-8268-4535-8c46-c5de6015afc7] ======= [SWD] HTTP REQUEST STARTED =======
+2017-01-19T16:00:22.041062+00:00 app[web.1]: GET /nov-rp-certified/rp-userinfo-bad-sub-claim/.well-known/openid-configuration HTTP/1.1
+2017-01-19T16:00:22.041064+00:00 app[web.1]: Host: rp.certification.openid.net:8080
+2017-01-19T16:00:22.041065+00:00 app[web.1]:
+2017-01-19T16:00:22.041065+00:00 app[web.1]:
+2017-01-19T16:00:22.202198+00:00 app[web.1]: I, [2017-01-19T16:00:22.202061 #4]  INFO -- : [7ac4fbe9-8268-4535-8c46-c5de6015afc7] --------------------------------------------------
+2017-01-19T16:00:22.202201+00:00 app[web.1]: Status: 200 OK
+2017-01-19T16:00:22.202203+00:00 app[web.1]: Cache-Control: no-store
+2017-01-19T16:00:22.202203+00:00 app[web.1]: x-ffo: bar
+2017-01-19T16:00:22.202204+00:00 app[web.1]: Content-type: application/json
+2017-01-19T16:00:22.202205+00:00 app[web.1]: Access-Control-Allow-Origin: *
+2017-01-19T16:00:22.202206+00:00 app[web.1]: Access-Control-Allow-Methods: GET
+2017-01-19T16:00:22.202207+00:00 app[web.1]: Access-Control-Allow-Headers: Authorization
+2017-01-19T16:00:22.202207+00:00 app[web.1]: Transfer-Encoding: chunked
+2017-01-19T16:00:22.202208+00:00 app[web.1]: Date: Thu, 19 Jan 2017 16:00:22 GMT
+2017-01-19T16:00:22.202208+00:00 app[web.1]: Server: openid-www2
+2017-01-19T16:00:22.202209+00:00 app[web.1]: Content-Length: 0
+2017-01-19T16:00:22.202210+00:00 app[web.1]:
+2017-01-19T16:00:22.202212+00:00 app[web.1]: {"request_parameter_supported": true, "require_request_uri_registration": true, "response_types_supported": ["code", "id_token token", "code id_token", "code token", "code id_token token"], "id_token_signing_alg_values_supported": ["RS256", "RS384", "RS512", "ES256", "ES384", "ES512", "HS256", "HS384", "HS512", "PS256", "PS384", "PS512", "none"], "token_endpoint_auth_methods_supported": ["client_secret_post", "client_secret_basic", "client_secret_jwt", "private_key_jwt"], "request_object_encryption_enc_values_supported": ["A128CBC-HS256", "A192CBC-HS384", "A256CBC-HS512", "A128GCM", "A192GCM", "A256GCM"], "response_modes_supported": ["query", "fragment", "form_post"], "jwks_uri": "https://rp.certification.openid.net:8080/static/jwks_nCzV67Wgi8in35wP.json", "userinfo_endpoint": "https://rp.certification.openid.net:8080/nov-rp-certified/rp-userinfo-bad-sub-claim/userinfo", "request_object_signing_alg_values_supported": ["RS256", "RS384", "RS512", "ES256", "ES384", "ES512", "HS256", "HS384", "HS512", "PS256", "PS384", "PS512", "none"], "userinfo_encryption_enc_values_supported": ["A128CBC-HS256", "A192CBC-HS384", "A256CBC-HS512", "A128GCM", "A192GCM", "A256GCM"], "token_endpoint": "https://rp.certification.openid.net:8080/nov-rp-certified/rp-userinfo-bad-sub-claim/token", "userinfo_encryption_alg_values_supported": ["RSA1_5", "RSA-OAEP", "A128KW", "A192KW", "A256KW", "ECDH-ES", "ECDH-ES+A128KW", "ECDH-ES+A192KW", "ECDH-ES+A256KW"], "claim_types_supported": ["normal", "aggregated", "distributed"], "id_token_encryption_alg_values_supported": ["RSA1_5", "RSA-OAEP", "A128KW", "A192KW", "A256KW", "ECDH-ES", "ECDH-ES+A128KW", "ECDH-ES+A192KW", "ECDH-ES+A256KW"], "userinfo_signing_alg_values_supported": ["RS256", "RS384", "RS512", "ES256", "ES384", "ES512", "HS256", "HS384", "HS512", "PS256", "PS384", "PS512", "none"], "claims_supported": ["updated_at", "name", "nickname", "sub", "middle_name", "locale", "phone_number_verified", "family_name", "email_verified", "website", "address", "zoneinfo", "email", "given_name", "birthdate", "preferred_username", "profile", "phone_number", "picture", "gender"], "version": "3.0", "claims_parameter_supported": true, "grant_types_supported": ["authorization_code", "implicit", "urn:ietf:params:oauth:grant-type:jwt-bearer"], "request_uri_parameter_supported": true, "subject_types_supported": ["public", "pairwise"], "scopes_supported": ["phone", "email", "offline_access", "openid", "profile", "address", "openid"], "request_object_encryption_alg_values_supported": ["RSA1_5", "RSA-OAEP", "A128KW", "A192KW", "A256KW", "ECDH-ES", "ECDH-ES+A128KW", "ECDH-ES+A192KW", "ECDH-ES+A256KW"], "end_session_endpoint": "https://rp.certification.openid.net:8080/nov-rp-certified/rp-userinfo-bad-sub-claim/end_session", "registration_endpoint": "https://rp.certification.openid.net:8080/nov-rp-certified/rp-userinfo-bad-sub-claim/registration", "id_token_encryption_enc_values_supported": ["A128CBC-HS256", "A192CBC-HS384", "A256CBC-HS512", "A128GCM", "A192GCM", "A256GCM"], "token_endpoint_auth_signing_alg_values_supported": ["RS256", "RS384", "RS512", "ES256", "ES384", "ES512", "HS256", "HS384", "HS512", "PS256", "PS384", "PS512"], "issuer": "https://rp.certification.openid.net:8080/nov-rp-certified/rp-userinfo-bad-sub-claim", "authorization_endpoint": "https://rp.certification.openid.net:8080/nov-rp-certified/rp-userinfo-bad-sub-claim/authorization", "acr_values_supported": ["PASSWORD"]}
+2017-01-19T16:00:22.202212+00:00 app[web.1]: ======= [SWD] HTTP REQUEST FINISHED =======
+2017-01-19T16:00:22.204560+00:00 app[web.1]: I, [2017-01-19T16:00:22.204486 #4]  INFO -- : [7ac4fbe9-8268-4535-8c46-c5de6015afc7] ======= [OpenIDConnect] HTTP REQUEST STARTED =======
+2017-01-19T16:00:22.204629+00:00 app[web.1]: I, [2017-01-19T16:00:22.204561 #4]  INFO -- : [7ac4fbe9-8268-4535-8c46-c5de6015afc7] POST /nov-rp-certified/rp-userinfo-bad-sub-claim/registration HTTP/1.1
+2017-01-19T16:00:22.204631+00:00 app[web.1]: Content-Type: application/json
+2017-01-19T16:00:22.204632+00:00 app[web.1]: Content-Length: 186
+2017-01-19T16:00:22.204632+00:00 app[web.1]: Host: rp.certification.openid.net:8080
+2017-01-19T16:00:22.204633+00:00 app[web.1]:
+2017-01-19T16:00:22.204634+00:00 app[web.1]: {"application_type":"web","client_name":"NOV RP - rp-userinfo-bad-sub-claim","redirect_uris":["https://connect-rp-certified.herokuapp.com/test_case_callbacks/rp-userinfo-bad-sub-claim"]}
+2017-01-19T16:00:22.363988+00:00 heroku[router]: at=info method=GET path="/test_cases/rp-userinfo-bad-sub-claim" host=connect-rp-certified.herokuapp.com request_id=7ac4fbe9-8268-4535-8c46-c5de6015afc7 fwd="122.210.153.65" dyno=web.1 connect=1ms service=347ms status=302 bytes=1766
+2017-01-19T16:00:22.286098+00:00 app[web.1]: I, [2017-01-19T16:00:22.285988 #4]  INFO -- : [7ac4fbe9-8268-4535-8c46-c5de6015afc7] --------------------------------------------------
+2017-01-19T16:00:22.286225+00:00 app[web.1]: I, [2017-01-19T16:00:22.286155 #4]  INFO -- : [7ac4fbe9-8268-4535-8c46-c5de6015afc7] Status: 201 Created
+2017-01-19T16:00:22.286227+00:00 app[web.1]: Cache-Control: no-store
+2017-01-19T16:00:22.286228+00:00 app[web.1]: Content-type: application/json
+2017-01-19T16:00:22.286229+00:00 app[web.1]: Access-Control-Allow-Origin: *
+2017-01-19T16:00:22.286230+00:00 app[web.1]: Access-Control-Allow-Methods: GET
+2017-01-19T16:00:22.286230+00:00 app[web.1]: Access-Control-Allow-Headers: Authorization
+2017-01-19T16:00:22.286231+00:00 app[web.1]: Transfer-Encoding: chunked
+2017-01-19T16:00:22.286231+00:00 app[web.1]: Date: Thu, 19 Jan 2017 16:00:22 GMT
+2017-01-19T16:00:22.286232+00:00 app[web.1]: Server: openid-www2
+2017-01-19T16:00:22.286233+00:00 app[web.1]: Content-Length: 0
+2017-01-19T16:00:22.286233+00:00 app[web.1]:
+2017-01-19T16:00:22.286235+00:00 app[web.1]: {"client_id": "Bl9mgFKaixmy", "client_secret": "f7279befe087030332790e37157da6efd21482f257c0af543553cb65", "response_types": ["code"], "client_name": "NOV RP - rp-userinfo-bad-sub-claim", "application_type": "web", "registration_client_uri": "https://rp.certification.openid.net:8080/nov-rp-certified/registration?client_id=Bl9mgFKaixmy", "registration_access_token": "tRVls1SR6dWxKx54h71v3yM5BxbKIP2o", "redirect_uris": ["https://connect-rp-certified.herokuapp.com/test_case_callbacks/rp-userinfo-bad-sub-claim"], "client_id_issued_at": 1484841622, "client_secret_expires_at": 1484928022}
+2017-01-19T16:00:22.286347+00:00 app[web.1]: I, [2017-01-19T16:00:22.286257 #4]  INFO -- : [7ac4fbe9-8268-4535-8c46-c5de6015afc7] ======= [OpenIDConnect] HTTP REQUEST FINISHED =======
+2017-01-19T16:00:22.306864+00:00 app[web.1]: D, [2017-01-19T16:00:22.306736 #4] DEBUG -- : [7ac4fbe9-8268-4535-8c46-c5de6015afc7]    (15.1ms)  BEGIN
+2017-01-19T16:00:22.317422+00:00 app[web.1]: D, [2017-01-19T16:00:22.317301 #4] DEBUG -- : [7ac4fbe9-8268-4535-8c46-c5de6015afc7]   Client Exists (4.0ms)  SELECT  1 AS one FROM "clients" WHERE "clients"."identifier" = $1 LIMIT $2  [["identifier", "Bl9mgFKaixmy"], ["LIMIT", 1]]
+2017-01-19T16:00:22.331013+00:00 app[web.1]: D, [2017-01-19T16:00:22.330878 #4] DEBUG -- : [7ac4fbe9-8268-4535-8c46-c5de6015afc7]   SQL (8.7ms)  INSERT INTO "clients" ("test_case_id", "identifier", "secret", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["test_case_id", 17], ["identifier", "Bl9mgFKaixmy"], ["secret", "f7279befe087030332790e37157da6efd21482f257c0af543553cb65"], ["created_at", 2017-01-19 16:00:22 UTC], ["updated_at", 2017-01-19 16:00:22 UTC]]
+2017-01-19T16:00:22.345954+00:00 app[web.1]: D, [2017-01-19T16:00:22.345813 #4] DEBUG -- : [7ac4fbe9-8268-4535-8c46-c5de6015afc7]    (5.9ms)  COMMIT
+2017-01-19T16:00:22.346966+00:00 app[web.1]: I, [2017-01-19T16:00:22.346892 #4]  INFO -- : [7ac4fbe9-8268-4535-8c46-c5de6015afc7] Redirected to https://rp.certification.openid.net:8080/nov-rp-certified/rp-userinfo-bad-sub-claim/authorization?client_id=Bl9mgFKaixmy&nonce=1706232d2c788dd7a08a25a5d8bc2999&redirect_uri=https%3A%2F%2Fconnect-rp-certified.herokuapp.com%2Ftest_case_callbacks%2Frp-userinfo-bad-sub-claim&response_type=code&scope=profile+email+address+phone+openid&state=3e931dd4b1d2ee0b913272b1b1593865
+2017-01-19T16:00:22.347259+00:00 app[web.1]: I, [2017-01-19T16:00:22.347177 #4]  INFO -- : [7ac4fbe9-8268-4535-8c46-c5de6015afc7] Completed 302 Found in 318ms (ActiveRecord: 34.5ms)
+2017-01-19T16:00:23.376895+00:00 app[web.1]: I, [2017-01-19T16:00:23.376800 #4]  INFO -- : [4233989d-b496-49bb-b38a-c4e2d2e624f1] Started GET "/test_case_callbacks/rp-userinfo-bad-sub-claim?client_id=Bl9mgFKaixmy&iss=https%3A%2F%2Frp.certification.openid.net%3A8080%2Fnov-rp-certified%2Frp-userinfo-bad-sub-claim&scope=profile+email+address+phone+openid&code=ZZULi3Qunu3TafVbedJNYGiDiKOklQDOU9rVNGyUFfkQRWHj22k%2BNd6LvtuZ%2BY2fNaqq%2Bv60Pe2U3hMVNCTzMvacEQkj%2BNhxQNDRC%2BFpx0SHjqVsSaO6zJ9pBipM8mvDbB1q%2B06b9ubOtwXHeE8Vlg%3D%3D&state=3e931dd4b1d2ee0b913272b1b1593865" for 122.210.153.65 at 2017-01-19 16:00:23 +0000
+2017-01-19T16:00:23.381658+00:00 app[web.1]: I, [2017-01-19T16:00:23.378799 #4]  INFO -- : [4233989d-b496-49bb-b38a-c4e2d2e624f1] Processing by TestCaseCallbacksController#show as HTML
+2017-01-19T16:00:23.382119+00:00 app[web.1]: I, [2017-01-19T16:00:23.382019 #4]  INFO -- : [4233989d-b496-49bb-b38a-c4e2d2e624f1]   Parameters: {"client_id"=>"Bl9mgFKaixmy", "iss"=>"https://rp.certification.openid.net:8080/nov-rp-certified/rp-userinfo-bad-sub-claim", "scope"=>"profile email address phone openid", "code"=>"ZZULi3Qunu3TafVbedJNYGiDiKOklQDOU9rVNGyUFfkQRWHj22k+Nd6LvtuZ+Y2fNaqq+v60Pe2U3hMVNCTzMvacEQkj+NhxQNDRC+Fpx0SHjqVsSaO6zJ9pBipM8mvDbB1q+06b9ubOtwXHeE8Vlg==", "state"=>"3e931dd4b1d2ee0b913272b1b1593865", "id"=>"rp-userinfo-bad-sub-claim"}
+2017-01-19T16:00:23.390287+00:00 app[web.1]: D, [2017-01-19T16:00:23.389811 #4] DEBUG -- : [4233989d-b496-49bb-b38a-c4e2d2e624f1]   TestCase Load (0.9ms)  SELECT  "test_cases".* FROM "test_cases" WHERE "test_cases"."identifier" = $1 LIMIT $2  [["identifier", "rp-userinfo-bad-sub-claim"], ["LIMIT", 1]]
+2017-01-19T16:00:23.409692+00:00 app[web.1]: D, [2017-01-19T16:00:23.409583 #4] DEBUG -- : [4233989d-b496-49bb-b38a-c4e2d2e624f1]   Client Load (11.3ms)  SELECT  "clients".* FROM "clients" WHERE "clients"."test_case_id" = $1 AND "clients"."identifier" = $2 LIMIT $3  [["test_case_id", 17], ["identifier", "Bl9mgFKaixmy"], ["LIMIT", 1]]
+2017-01-19T16:00:23.411456+00:00 app[web.1]: I, [2017-01-19T16:00:23.411311 #4]  INFO -- : [4233989d-b496-49bb-b38a-c4e2d2e624f1] ======= [SWD] HTTP REQUEST STARTED =======
+2017-01-19T16:00:23.411458+00:00 app[web.1]: GET /nov-rp-certified/rp-userinfo-bad-sub-claim/.well-known/openid-configuration HTTP/1.1
+2017-01-19T16:00:23.411459+00:00 app[web.1]: Host: rp.certification.openid.net:8080
+2017-01-19T16:00:23.411459+00:00 app[web.1]:
+2017-01-19T16:00:23.411460+00:00 app[web.1]:
+2017-01-19T16:00:23.491431+00:00 app[web.1]: I, [2017-01-19T16:00:23.491263 #4]  INFO -- : [4233989d-b496-49bb-b38a-c4e2d2e624f1] --------------------------------------------------
+2017-01-19T16:00:23.491434+00:00 app[web.1]: Status: 200 OK
+2017-01-19T16:00:23.491435+00:00 app[web.1]: Cache-Control: no-store
+2017-01-19T16:00:23.491436+00:00 app[web.1]: x-ffo: bar
+2017-01-19T16:00:23.491437+00:00 app[web.1]: Content-type: application/json
+2017-01-19T16:00:23.491438+00:00 app[web.1]: Access-Control-Allow-Origin: *
+2017-01-19T16:00:23.491438+00:00 app[web.1]: Access-Control-Allow-Methods: GET
+2017-01-19T16:00:23.491439+00:00 app[web.1]: Access-Control-Allow-Headers: Authorization
+2017-01-19T16:00:23.491440+00:00 app[web.1]: Transfer-Encoding: chunked
+2017-01-19T16:00:23.491441+00:00 app[web.1]: Date: Thu, 19 Jan 2017 16:00:23 GMT
+2017-01-19T16:00:23.491441+00:00 app[web.1]: Server: openid-www2
+2017-01-19T16:00:23.491442+00:00 app[web.1]: Content-Length: 0
+2017-01-19T16:00:23.491442+00:00 app[web.1]:
+2017-01-19T16:00:23.491444+00:00 app[web.1]: {"request_parameter_supported": true, "require_request_uri_registration": true, "response_types_supported": ["code", "id_token token", "code id_token", "code token", "code id_token token"], "id_token_signing_alg_values_supported": ["RS256", "RS384", "RS512", "ES256", "ES384", "ES512", "HS256", "HS384", "HS512", "PS256", "PS384", "PS512", "none"], "token_endpoint_auth_methods_supported": ["client_secret_post", "client_secret_basic", "client_secret_jwt", "private_key_jwt"], "request_object_encryption_enc_values_supported": ["A128CBC-HS256", "A192CBC-HS384", "A256CBC-HS512", "A128GCM", "A192GCM", "A256GCM"], "response_modes_supported": ["query", "fragment", "form_post"], "jwks_uri": "https://rp.certification.openid.net:8080/static/jwks_Uw7gNmvf5ZJwp5a9.json", "userinfo_endpoint": "https://rp.certification.openid.net:8080/nov-rp-certified/rp-userinfo-bad-sub-claim/userinfo", "request_object_signing_alg_values_supported": ["RS256", "RS384", "RS512", "ES256", "ES384", "ES512", "HS256", "HS384", "HS512", "PS256", "PS384", "PS512", "none"], "userinfo_encryption_enc_values_supported": ["A128CBC-HS256", "A192CBC-HS384", "A256CBC-HS512", "A128GCM", "A192GCM", "A256GCM"], "token_endpoint": "https://rp.certification.openid.net:8080/nov-rp-certified/rp-userinfo-bad-sub-claim/token", "userinfo_encryption_alg_values_supported": ["RSA1_5", "RSA-OAEP", "A128KW", "A192KW", "A256KW", "ECDH-ES", "ECDH-ES+A128KW", "ECDH-ES+A192KW", "ECDH-ES+A256KW"], "claim_types_supported": ["normal", "aggregated", "distributed"], "id_token_encryption_alg_values_supported": ["RSA1_5", "RSA-OAEP", "A128KW", "A192KW", "A256KW", "ECDH-ES", "ECDH-ES+A128KW", "ECDH-ES+A192KW", "ECDH-ES+A256KW"], "userinfo_signing_alg_values_supported": ["RS256", "RS384", "RS512", "ES256", "ES384", "ES512", "HS256", "HS384", "HS512", "PS256", "PS384", "PS512", "none"], "claims_supported": ["updated_at", "name", "nickname", "sub", "middle_name", "locale", "phone_number_verified", "family_name", "email_verified", "website", "address", "zoneinfo", "email", "given_name", "birthdate", "preferred_username", "profile", "phone_number", "picture", "gender"], "version": "3.0", "claims_parameter_supported": true, "grant_types_supported": ["authorization_code", "implicit", "urn:ietf:params:oauth:grant-type:jwt-bearer"], "request_uri_parameter_supported": true, "subject_types_supported": ["public", "pairwise"], "scopes_supported": ["phone", "email", "offline_access", "openid", "profile", "address", "openid"], "request_object_encryption_alg_values_supported": ["RSA1_5", "RSA-OAEP", "A128KW", "A192KW", "A256KW", "ECDH-ES", "ECDH-ES+A128KW", "ECDH-ES+A192KW", "ECDH-ES+A256KW"], "end_session_endpoint": "https://rp.certification.openid.net:8080/nov-rp-certified/rp-userinfo-bad-sub-claim/end_session", "registration_endpoint": "https://rp.certification.openid.net:8080/nov-rp-certified/rp-userinfo-bad-sub-claim/registration", "id_token_encryption_enc_values_supported": ["A128CBC-HS256", "A192CBC-HS384", "A256CBC-HS512", "A128GCM", "A192GCM", "A256GCM"], "token_endpoint_auth_signing_alg_values_supported": ["RS256", "RS384", "RS512", "ES256", "ES384", "ES512", "HS256", "HS384", "HS512", "PS256", "PS384", "PS512"], "issuer": "https://rp.certification.openid.net:8080/nov-rp-certified/rp-userinfo-bad-sub-claim", "authorization_endpoint": "https://rp.certification.openid.net:8080/nov-rp-certified/rp-userinfo-bad-sub-claim/authorization", "acr_values_supported": ["PASSWORD"]}
+2017-01-19T16:00:23.491445+00:00 app[web.1]: ======= [SWD] HTTP REQUEST FINISHED =======
+2017-01-19T16:00:23.500690+00:00 app[web.1]: I, [2017-01-19T16:00:23.499154 #4]  INFO -- : [4233989d-b496-49bb-b38a-c4e2d2e624f1] ======= [Rack::OAuth2] HTTP REQUEST STARTED =======
+2017-01-19T16:00:23.500774+00:00 app[web.1]: I, [2017-01-19T16:00:23.500691 #4]  INFO -- : [4233989d-b496-49bb-b38a-c4e2d2e624f1] POST /nov-rp-certified/rp-userinfo-bad-sub-claim/token HTTP/1.1
+2017-01-19T16:00:23.500776+00:00 app[web.1]: Authorization: Basic Qmw5bWdGS2FpeG15OmY3Mjc5YmVmZTA4NzAzMDMzMjc5MGUzNzE1N2RhNmVmZDIxNDgyZjI1N2MwYWY1NDM1NTNjYjY1
+2017-01-19T16:00:23.500777+00:00 app[web.1]: Content-Type: application/x-www-form-urlencoded
+2017-01-19T16:00:23.500778+00:00 app[web.1]: Content-Length: 315
+2017-01-19T16:00:23.500779+00:00 app[web.1]: Host: rp.certification.openid.net:8080
+2017-01-19T16:00:23.500780+00:00 app[web.1]:
+2017-01-19T16:00:23.500781+00:00 app[web.1]: grant_type=authorization_code&code=ZZULi3Qunu3TafVbedJNYGiDiKOklQDOU9rVNGyUFfkQRWHj22k%2BNd6LvtuZ%2BY2fNaqq%2Bv60Pe2U3hMVNCTzMvacEQkj%2BNhxQNDRC%2BFpx0SHjqVsSaO6zJ9pBipM8mvDbB1q%2B06b9ubOtwXHeE8Vlg%3D%3D&redirect_uri=https%3A%2F%2Fconnect-rp-certified.herokuapp.com%2Ftest_case_callbacks%2Frp-userinfo-bad-sub-claim
+2017-01-19T16:00:23.608628+00:00 app[web.1]: I, [2017-01-19T16:00:23.608328 #4]  INFO -- : [4233989d-b496-49bb-b38a-c4e2d2e624f1] --------------------------------------------------
+2017-01-19T16:00:23.608715+00:00 app[web.1]: I, [2017-01-19T16:00:23.608661 #4]  INFO -- : [4233989d-b496-49bb-b38a-c4e2d2e624f1] Status: 200 OK
+2017-01-19T16:00:23.608719+00:00 app[web.1]: Content-type: application/json
+2017-01-19T16:00:23.608720+00:00 app[web.1]: Access-Control-Allow-Origin: *
+2017-01-19T16:00:23.608721+00:00 app[web.1]: Access-Control-Allow-Methods: GET
+2017-01-19T16:00:23.608721+00:00 app[web.1]: Access-Control-Allow-Headers: Authorization
+2017-01-19T16:00:23.608722+00:00 app[web.1]: Transfer-Encoding: chunked
+2017-01-19T16:00:23.608722+00:00 app[web.1]: Date: Thu, 19 Jan 2017 16:00:23 GMT
+2017-01-19T16:00:23.608723+00:00 app[web.1]: Server: openid-www2
+2017-01-19T16:00:23.608724+00:00 app[web.1]: Content-Length: 0
+2017-01-19T16:00:23.608725+00:00 app[web.1]:
+2017-01-19T16:00:23.608727+00:00 app[web.1]: {"token_type": "Bearer", "scope": "profile email address phone openid", "access_token": "BjeAwBDcxc74CnGxbFjfww6Ttay5+v7CoeQdqny64WD4wtkDtAoiR5CkRyfiDXOfrKWSImuvwlcKiJmnemWiumLLUpRvPAjwUyeM9W7uMxlgqTgnBH5zmJXYKnpe3raE7rj4A56uAXS/FFlE+LkoFw==", "state": "3e931dd4b1d2ee0b913272b1b1593865", "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImJfRGxmVk5CbWdHSFViekxmYzNKa1I5SUpJTmNZZ2NRN01yZ0hmUkxhcDAifQ.eyJpc3MiOiAiaHR0cHM6Ly9ycC5jZXJ0aWZpY2F0aW9uLm9wZW5pZC5uZXQ6ODA4MC9ub3YtcnAtY2VydGlmaWVkL3JwLXVzZXJpbmZvLWJhZC1zdWItY2xhaW0iLCAiaWF0IjogMTQ4NDg0MTYyMywgIm5vbmNlIjogIjE3MDYyMzJkMmM3ODhkZDdhMDhhMjVhNWQ4YmMyOTk5IiwgInN1YiI6ICIxYjJmYzkzNDFhMTZhZTRlMzAwODI5NjVkNTM3YWU0N2MyMWEwZjI3ZmQ0M2VhYjc4MzMwZWQ4MTc1MWFlNmRiIiwgImFjciI6ICJQQVNTV09SRCIsICJhdWQiOiBbIkJsOW1nRkthaXhteSJdLCAiZXhwIjogMTQ4NDkyODAyMywgImF1dGhfdGltZSI6IDE0ODQ4NDE2MjN9.DYHXnlIrqeoCTsTfsykxoZtVShqFdwu14EbwluXzr3V2TD0h1GuIuo0tfSO5qIDDz2dj7NttMwtTlsU2UDlzoNRPewOvZtA0McgpTf2GMse_SqIR_HA3jEvxHRvf9Un4LQ8l2th0JEOfUpbQIw7Lz0RZe0Bm6HlgjZ9j_VNHmmh4xAdHUKjkFF7iQ-FHYwYrGA8fGZEryow5U82ZblaPbHda9qAkq2QOd1wEcSJwtceMO6vRMi3gvZ12jXqrbvVvvaZmUrRDrHTAoFlJ1M_CMnL6uDAH92FoGwYGedIBpL-3GfErzkyVcOIuVJwgcNIAnkppJXm5Xc5uEmmLQkr8_A"}
+2017-01-19T16:00:23.608997+00:00 app[web.1]: I, [2017-01-19T16:00:23.608947 #4]  INFO -- : [4233989d-b496-49bb-b38a-c4e2d2e624f1] ======= [Rack::OAuth2] HTTP REQUEST FINISHED =======
+2017-01-19T16:00:23.611555+00:00 app[web.1]: I, [2017-01-19T16:00:23.611490 #4]  INFO -- : [4233989d-b496-49bb-b38a-c4e2d2e624f1] ======= [OpenIDConnect] HTTP REQUEST STARTED =======
+2017-01-19T16:00:23.611831+00:00 app[web.1]: I, [2017-01-19T16:00:23.611782 #4]  INFO -- : [4233989d-b496-49bb-b38a-c4e2d2e624f1] GET /static/jwks_Uw7gNmvf5ZJwp5a9.json HTTP/1.1
+2017-01-19T16:00:23.611833+00:00 app[web.1]: Host: rp.certification.openid.net:8080
+2017-01-19T16:00:23.611834+00:00 app[web.1]:
+2017-01-19T16:00:23.611834+00:00 app[web.1]:
+2017-01-19T16:00:23.862667+00:00 heroku[router]: at=info method=GET path="/test_case_callbacks/rp-userinfo-bad-sub-claim?client_id=Bl9mgFKaixmy&iss=https%3A%2F%2Frp.certification.openid.net%3A8080%2Fnov-rp-certified%2Frp-userinfo-bad-sub-claim&scope=profile+email+address+phone+openid&code=ZZULi3Qunu3TafVbedJNYGiDiKOklQDOU9rVNGyUFfkQRWHj22k%2BNd6LvtuZ%2BY2fNaqq%2Bv60Pe2U3hMVNCTzMvacEQkj%2BNhxQNDRC%2BFpx0SHjqVsSaO6zJ9pBipM8mvDbB1q%2B06b9ubOtwXHeE8Vlg%3D%3D&state=3e931dd4b1d2ee0b913272b1b1593865" host=connect-rp-certified.herokuapp.com request_id=4233989d-b496-49bb-b38a-c4e2d2e624f1 fwd="122.210.153.65" dyno=web.1 connect=1ms service=509ms status=200 bytes=2819
+2017-01-19T16:00:23.746004+00:00 app[web.1]: I, [2017-01-19T16:00:23.745872 #4]  INFO -- : [4233989d-b496-49bb-b38a-c4e2d2e624f1] --------------------------------------------------
+2017-01-19T16:00:23.746062+00:00 app[web.1]: I, [2017-01-19T16:00:23.745997 #4]  INFO -- : [4233989d-b496-49bb-b38a-c4e2d2e624f1] Status: 200 OK
+2017-01-19T16:00:23.746064+00:00 app[web.1]: Content-type: text/html
+2017-01-19T16:00:23.746065+00:00 app[web.1]: Access-Control-Allow-Origin: *
+2017-01-19T16:00:23.746066+00:00 app[web.1]: Access-Control-Allow-Methods: GET
+2017-01-19T16:00:23.746066+00:00 app[web.1]: Access-Control-Allow-Headers: Authorization
+2017-01-19T16:00:23.746067+00:00 app[web.1]: Transfer-Encoding: chunked
+2017-01-19T16:00:23.746067+00:00 app[web.1]: Date: Thu, 19 Jan 2017 16:00:23 GMT
+2017-01-19T16:00:23.746068+00:00 app[web.1]: Server: openid-www2
+2017-01-19T16:00:23.746068+00:00 app[web.1]: Content-Length: 0
+2017-01-19T16:00:23.746069+00:00 app[web.1]:
+2017-01-19T16:00:23.746071+00:00 app[web.1]: {"keys": [{"kty": "RSA", "e": "AQAB", "n": "qAEO5HN-iXYser8joW8u2Uhegg0egZ0Y1bk_WNt4NKrQJbMdf5o7Kl6eRIQ9oQfR5e7b6oUSwHtngNd3o1KZHKzyxPYp72i9HCKKxZPvnC7_1xNhBvqR3cjSogPDhBxtiho2vtgPxmhQOjtjV3yS-Ik8twPUSwfY1GxLZjeXeIXCLrd-3hFKgeoOcwENvaolTTUf9CxIfpKk0s95B1V8mLFvjVqT7ftn84VQdf88kwBTEIThRlM9Ot00NoNgbitmf95xj8sMera-ZT2zBElBnlMFiLN_bHuADQROimy-iGfhqpH3d_tWaAtXZFCJ7OY6CDPVQZ9fKSjmLeeDOyFR_Q", "kid": "48Afw-zz40sUw6Uj8ZCsfqnm0q9Bq3bK9yYcozi50Zw", "use": "enc"}, {"kty": "RSA", "e": "AQAB", "n": "tR3l3Oc1_sNfRbHp_BIjh52bL8o4-S21GlRAhRb0vSdnfIFWJKM6SRPtZh96ShDdWja-lZC7f2rqK1iNVsEi5FYcRcEUN5-wcZimoee7jo_DzFozRhqu2x57Y2YGE-b1GhgyM6PjLd8NMoU60eQ7SHACuJj_2ewtK-ffNuxCnyK9O_TMq-vi4OUousQXDJxaOrHnVYZvxGBtwgM-oGWF2o0VOAS9A8RRT-1SpIwcnNRrg_hUtCh3W-epzb_Hm5fBsA6YBmTc2cHIqDwq0ue8T3WM7NKX7Wg-FcZFV4IJOzkJ8KYDbTqDBjiiygYUVKTQl4WdIm9ova-Fblo8iceiOw", "kid": "b_DlfVNBmgGHUbzLfc3JkR9IJINcYgcQ7MrgHfRLap0", "use": "sig"}, {"y": "ZV-Qv-l0W4x6bRtZpY9nbtfB16IsbZgD_s1Ij0tzzqw", "x": "gbXzgi85BLLirjFbjdYU4xqvodAKOnPThlXE1I0h_q4", "kty": "EC", "crv": "P-256", "kid": "CzHDxT2OrV2yblaTU_M1T-FfYbLIlsyvSNJORAycY_Q", "use": "sig"}, {"y": "iq4cg4edBnFiCRQ8dtSPLpq76h7mO1Z3imKAwPYToQ", "x": "eS0QXtIGq1ri29CtaSa5PD8PBkGL3domM70f3YO-vaU", "kty": "EC", "crv": "P-256", "kid": "jctMt0kDRN2mxEszSTvfw1DqpESssVWnZo24vQQMjDc", "use": "enc"}]}
+2017-01-19T16:00:23.753841+00:00 app[web.1]: I, [2017-01-19T16:00:23.753717 #4]  INFO -- : [4233989d-b496-49bb-b38a-c4e2d2e624f1] ======= [OpenIDConnect] HTTP REQUEST FINISHED =======
+2017-01-19T16:00:23.762165+00:00 app[web.1]: I, [2017-01-19T16:00:23.762059 #4]  INFO -- : [4233989d-b496-49bb-b38a-c4e2d2e624f1] ======= [Rack::OAuth2] HTTP REQUEST STARTED =======
+2017-01-19T16:00:23.762257+00:00 app[web.1]: I, [2017-01-19T16:00:23.762196 #4]  INFO -- : [4233989d-b496-49bb-b38a-c4e2d2e624f1] GET /nov-rp-certified/rp-userinfo-bad-sub-claim/userinfo? HTTP/1.1
+2017-01-19T16:00:23.762258+00:00 app[web.1]: Authorization: Bearer BjeAwBDcxc74CnGxbFjfww6Ttay5+v7CoeQdqny64WD4wtkDtAoiR5CkRyfiDXOfrKWSImuvwlcKiJmnemWiumLLUpRvPAjwUyeM9W7uMxlgqTgnBH5zmJXYKnpe3raE7rj4A56uAXS/FFlE+LkoFw==
+2017-01-19T16:00:23.762259+00:00 app[web.1]: Host: rp.certification.openid.net:8080
+2017-01-19T16:00:23.762260+00:00 app[web.1]:
+2017-01-19T16:00:23.762261+00:00 app[web.1]:
+2017-01-19T16:00:23.854502+00:00 app[web.1]: I, [2017-01-19T16:00:23.854374 #4]  INFO -- : [4233989d-b496-49bb-b38a-c4e2d2e624f1] --------------------------------------------------
+2017-01-19T16:00:23.854630+00:00 app[web.1]: I, [2017-01-19T16:00:23.854567 #4]  INFO -- : [4233989d-b496-49bb-b38a-c4e2d2e624f1] Status: 200 OK
+2017-01-19T16:00:23.854632+00:00 app[web.1]: Content-type: application/json
+2017-01-19T16:00:23.854632+00:00 app[web.1]: Access-Control-Allow-Origin: *
+2017-01-19T16:00:23.854634+00:00 app[web.1]: Access-Control-Allow-Methods: GET
+2017-01-19T16:00:23.854634+00:00 app[web.1]: Access-Control-Allow-Headers: Authorization
+2017-01-19T16:00:23.854635+00:00 app[web.1]: Transfer-Encoding: chunked
+2017-01-19T16:00:23.854636+00:00 app[web.1]: Date: Thu, 19 Jan 2017 16:00:23 GMT
+2017-01-19T16:00:23.854636+00:00 app[web.1]: Server: openid-www2
+2017-01-19T16:00:23.854637+00:00 app[web.1]: Content-Length: 0
+2017-01-19T16:00:23.854638+00:00 app[web.1]:
+2017-01-19T16:00:23.854639+00:00 app[web.1]: {"name": "Diana Krall", "nickname": "Dina", "sub": "foobar", "email": "diana@example.org", "given_name": "Diana", "family_name": "Krall", "email_verified": false, "phone_number": "+46 90 7865000", "address": {"locality": "Ume\u00e5", "postal_code": "SE-90187", "country": "Sweden", "street_address": "Ume\u00e5 Universitet"}}
+2017-01-19T16:00:23.854781+00:00 app[web.1]: I, [2017-01-19T16:00:23.854661 #4]  INFO -- : [4233989d-b496-49bb-b38a-c4e2d2e624f1] ======= [Rack::OAuth2] HTTP REQUEST FINISHED =======
+2017-01-19T16:00:23.858234+00:00 app[web.1]: I, [2017-01-19T16:00:23.858121 #4]  INFO -- : [4233989d-b496-49bb-b38a-c4e2d2e624f1] # ERROR => "sub" mismatch between ID Token and UserInfo (OpenIDConnect::Exception)
+2017-01-19T16:00:23.858236+00:00 app[web.1]:
+2017-01-19T16:00:23.859135+00:00 app[web.1]: I, [2017-01-19T16:00:23.859025 #4]  INFO -- : [4233989d-b496-49bb-b38a-c4e2d2e624f1]   Rendering protocol_error.html.erb within layouts/popup
+2017-01-19T16:00:23.859503+00:00 app[web.1]: I, [2017-01-19T16:00:23.859442 #4]  INFO -- : [4233989d-b496-49bb-b38a-c4e2d2e624f1]   Rendered protocol_error.html.erb within layouts/popup (0.2ms)
+2017-01-19T16:00:23.861224+00:00 app[web.1]: I, [2017-01-19T16:00:23.861155 #4]  INFO -- : [4233989d-b496-49bb-b38a-c4e2d2e624f1]   Rendered layouts/_wrapper.html.erb (1.4ms)
+2017-01-19T16:00:23.861629+00:00 app[web.1]: I, [2017-01-19T16:00:23.861569 #4]  INFO -- : [4233989d-b496-49bb-b38a-c4e2d2e624f1] Completed 200 OK in 479ms (Views: 3.1ms | ActiveRecord: 12.2ms)

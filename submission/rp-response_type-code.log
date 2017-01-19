@@ -1,0 +1,140 @@
+2017-01-19T15:51:39.713515+00:00 app[web.1]: I, [2017-01-19T15:51:39.713413 #4]  INFO -- : [8966097f-e1f4-45d2-aa79-3fcbad905ec3] Started GET "/test_cases/rp-response_type-code" for 122.210.153.65 at 2017-01-19 15:51:39 +0000
+2017-01-19T15:51:39.714638+00:00 app[web.1]: I, [2017-01-19T15:51:39.714581 #4]  INFO -- : [8966097f-e1f4-45d2-aa79-3fcbad905ec3] Processing by TestCasesController#show as HTML
+2017-01-19T15:51:39.714750+00:00 app[web.1]: I, [2017-01-19T15:51:39.714672 #4]  INFO -- : [8966097f-e1f4-45d2-aa79-3fcbad905ec3]   Parameters: {"id"=>"rp-response_type-code"}
+2017-01-19T15:51:39.721267+00:00 app[web.1]: D, [2017-01-19T15:51:39.721196 #4] DEBUG -- : [8966097f-e1f4-45d2-aa79-3fcbad905ec3]   TestCase Load (4.1ms)  SELECT  "test_cases".* FROM "test_cases" WHERE "test_cases"."identifier" = $1 LIMIT $2  [["identifier", "rp-response_type-code"], ["LIMIT", 1]]
+2017-01-19T15:51:39.722223+00:00 app[web.1]: I, [2017-01-19T15:51:39.722150 #4]  INFO -- : [8966097f-e1f4-45d2-aa79-3fcbad905ec3] ======= [SWD] HTTP REQUEST STARTED =======
+2017-01-19T15:51:39.722225+00:00 app[web.1]: GET /nov-rp-certified/rp-response_type-code/.well-known/openid-configuration HTTP/1.1
+2017-01-19T15:51:39.722227+00:00 app[web.1]: Host: rp.certification.openid.net:8080
+2017-01-19T15:51:39.722228+00:00 app[web.1]:
+2017-01-19T15:51:39.722228+00:00 app[web.1]:
+2017-01-19T15:51:39.757967+00:00 app[web.1]: I, [2017-01-19T15:51:39.757810 #4]  INFO -- : [8966097f-e1f4-45d2-aa79-3fcbad905ec3] --------------------------------------------------
+2017-01-19T15:51:39.757970+00:00 app[web.1]: Status: 200 OK
+2017-01-19T15:51:39.757971+00:00 app[web.1]: Cache-Control: no-store
+2017-01-19T15:51:39.757971+00:00 app[web.1]: x-ffo: bar
+2017-01-19T15:51:39.757972+00:00 app[web.1]: Content-type: application/json
+2017-01-19T15:51:39.757972+00:00 app[web.1]: Access-Control-Allow-Origin: *
+2017-01-19T15:51:39.757973+00:00 app[web.1]: Access-Control-Allow-Methods: GET
+2017-01-19T15:51:39.757974+00:00 app[web.1]: Access-Control-Allow-Headers: Authorization
+2017-01-19T15:51:39.757974+00:00 app[web.1]: Transfer-Encoding: chunked
+2017-01-19T15:51:39.757975+00:00 app[web.1]: Date: Thu, 19 Jan 2017 15:51:39 GMT
+2017-01-19T15:51:39.757975+00:00 app[web.1]: Server: openid-www2
+2017-01-19T15:51:39.757976+00:00 app[web.1]: Content-Length: 0
+2017-01-19T15:51:39.757976+00:00 app[web.1]:
+2017-01-19T15:51:39.757988+00:00 app[web.1]: {"request_parameter_supported": true, "require_request_uri_registration": true, "response_types_supported": ["code"], "id_token_signing_alg_values_supported": ["RS256", "RS384", "RS512", "ES256", "ES384", "ES512", "HS256", "HS384", "HS512", "PS256", "PS384", "PS512", "none"], "token_endpoint_auth_methods_supported": ["client_secret_post", "client_secret_basic", "client_secret_jwt", "private_key_jwt"], "request_object_encryption_enc_values_supported": ["A128CBC-HS256", "A192CBC-HS384", "A256CBC-HS512", "A128GCM", "A192GCM", "A256GCM"], "response_modes_supported": ["query", "fragment", "form_post"], "jwks_uri": "https://rp.certification.openid.net:8080/static/jwks_c7HQSDnvfQyK8Wlf.json", "userinfo_endpoint": "https://rp.certification.openid.net:8080/nov-rp-certified/rp-response_type-code/userinfo", "request_object_signing_alg_values_supported": ["RS256", "RS384", "RS512", "ES256", "ES384", "ES512", "HS256", "HS384", "HS512", "PS256", "PS384", "PS512", "none"], "userinfo_encryption_enc_values_supported": ["A128CBC-HS256", "A192CBC-HS384", "A256CBC-HS512", "A128GCM", "A192GCM", "A256GCM"], "token_endpoint": "https://rp.certification.openid.net:8080/nov-rp-certified/rp-response_type-code/token", "userinfo_encryption_alg_values_supported": ["RSA1_5", "RSA-OAEP", "A128KW", "A192KW", "A256KW", "ECDH-ES", "ECDH-ES+A128KW", "ECDH-ES+A192KW", "ECDH-ES+A256KW"], "claim_types_supported": ["normal", "aggregated", "distributed"], "id_token_encryption_alg_values_supported": ["RSA1_5", "RSA-OAEP", "A128KW", "A192KW", "A256KW", "ECDH-ES", "ECDH-ES+A128KW", "ECDH-ES+A192KW", "ECDH-ES+A256KW"], "userinfo_signing_alg_values_supported": ["RS256", "RS384", "RS512", "ES256", "ES384", "ES512", "HS256", "HS384", "HS512", "PS256", "PS384", "PS512", "none"], "claims_supported": ["updated_at", "name", "nickname", "sub", "middle_name", "locale", "phone_number_verified", "family_name", "email_verified", "website", "address", "zoneinfo", "email", "given_name", "birthdate", "preferred_username", "profile", "phone_number", "picture", "gender"], "version": "3.0", "claims_parameter_supported": true, "grant_types_supported": ["authorization_code", "implicit", "urn:ietf:params:oauth:grant-type:jwt-bearer"], "request_uri_parameter_supported": true, "subject_types_supported": ["public", "pairwise"], "scopes_supported": ["phone", "email", "offline_access", "openid", "profile", "address", "openid"], "request_object_encryption_alg_values_supported": ["RSA1_5", "RSA-OAEP", "A128KW", "A192KW", "A256KW", "ECDH-ES", "ECDH-ES+A128KW", "ECDH-ES+A192KW", "ECDH-ES+A256KW"], "end_session_endpoint": "https://rp.certification.openid.net:8080/nov-rp-certified/rp-response_type-code/end_session", "registration_endpoint": "https://rp.certification.openid.net:8080/nov-rp-certified/rp-response_type-code/registration", "id_token_encryption_enc_values_supported": ["A128CBC-HS256", "A192CBC-HS384", "A256CBC-HS512", "A128GCM", "A192GCM", "A256GCM"], "token_endpoint_auth_signing_alg_values_supported": ["RS256", "RS384", "RS512", "ES256", "ES384", "ES512", "HS256", "HS384", "HS512", "PS256", "PS384", "PS512"], "issuer": "https://rp.certification.openid.net:8080/nov-rp-certified/rp-response_type-code", "authorization_endpoint": "https://rp.certification.openid.net:8080/nov-rp-certified/rp-response_type-code/authorization", "acr_values_supported": ["PASSWORD"]}
+2017-01-19T15:51:39.757989+00:00 app[web.1]: ======= [SWD] HTTP REQUEST FINISHED =======
+2017-01-19T15:51:39.760418+00:00 app[web.1]: I, [2017-01-19T15:51:39.760336 #4]  INFO -- : [8966097f-e1f4-45d2-aa79-3fcbad905ec3] ======= [OpenIDConnect] HTTP REQUEST STARTED =======
+2017-01-19T15:51:39.760491+00:00 app[web.1]: I, [2017-01-19T15:51:39.760421 #4]  INFO -- : [8966097f-e1f4-45d2-aa79-3fcbad905ec3] POST /nov-rp-certified/rp-response_type-code/registration HTTP/1.1
+2017-01-19T15:51:39.760492+00:00 app[web.1]: Content-Type: application/json
+2017-01-19T15:51:39.760493+00:00 app[web.1]: Content-Length: 178
+2017-01-19T15:51:39.760494+00:00 app[web.1]: Host: rp.certification.openid.net:8080
+2017-01-19T15:51:39.760495+00:00 app[web.1]:
+2017-01-19T15:51:39.760496+00:00 app[web.1]: {"application_type":"web","client_name":"NOV RP - rp-response_type-code","redirect_uris":["https://connect-rp-certified.herokuapp.com/test_case_callbacks/rp-response_type-code"]}
+2017-01-19T15:51:39.790753+00:00 app[web.1]: I, [2017-01-19T15:51:39.790604 #4]  INFO -- : [8966097f-e1f4-45d2-aa79-3fcbad905ec3] --------------------------------------------------
+2017-01-19T15:51:39.790870+00:00 app[web.1]: I, [2017-01-19T15:51:39.790788 #4]  INFO -- : [8966097f-e1f4-45d2-aa79-3fcbad905ec3] Status: 201 Created
+2017-01-19T15:51:39.790872+00:00 app[web.1]: Cache-Control: no-store
+2017-01-19T15:51:39.790872+00:00 app[web.1]: Content-type: application/json
+2017-01-19T15:51:39.790872+00:00 app[web.1]: Access-Control-Allow-Origin: *
+2017-01-19T15:51:39.790873+00:00 app[web.1]: Access-Control-Allow-Methods: GET
+2017-01-19T15:51:39.790874+00:00 app[web.1]: Access-Control-Allow-Headers: Authorization
+2017-01-19T15:51:39.790874+00:00 app[web.1]: Transfer-Encoding: chunked
+2017-01-19T15:51:39.790875+00:00 app[web.1]: Date: Thu, 19 Jan 2017 15:51:39 GMT
+2017-01-19T15:51:39.790875+00:00 app[web.1]: Server: openid-www2
+2017-01-19T15:51:39.790875+00:00 app[web.1]: Content-Length: 0
+2017-01-19T15:51:39.790876+00:00 app[web.1]:
+2017-01-19T15:51:39.790879+00:00 app[web.1]: {"client_id": "5bnoIpi7Zokt", "client_secret": "62fe82e5a3d3a6ef042b10d70b353ef82d2c0010f78eb18502835f17", "response_types": ["code"], "client_name": "NOV RP - rp-response_type-code", "application_type": "web", "registration_client_uri": "https://rp.certification.openid.net:8080/nov-rp-certified/registration?client_id=5bnoIpi7Zokt", "registration_access_token": "eDthbmpvyvyI7hoTus3ohaPUDYVLlAZT", "redirect_uris": ["https://connect-rp-certified.herokuapp.com/test_case_callbacks/rp-response_type-code"], "client_id_issued_at": 1484841099, "client_secret_expires_at": 1484927499}
+2017-01-19T15:51:39.790973+00:00 app[web.1]: I, [2017-01-19T15:51:39.790912 #4]  INFO -- : [8966097f-e1f4-45d2-aa79-3fcbad905ec3] ======= [OpenIDConnect] HTTP REQUEST FINISHED =======
+2017-01-19T15:51:39.794391+00:00 app[web.1]: D, [2017-01-19T15:51:39.794327 #4] DEBUG -- : [8966097f-e1f4-45d2-aa79-3fcbad905ec3]    (0.7ms)  BEGIN
+2017-01-19T15:51:39.801269+00:00 app[web.1]: D, [2017-01-19T15:51:39.801107 #4] DEBUG -- : [8966097f-e1f4-45d2-aa79-3fcbad905ec3]   Client Exists (4.5ms)  SELECT  1 AS one FROM "clients" WHERE "clients"."identifier" = $1 LIMIT $2  [["identifier", "5bnoIpi7Zokt"], ["LIMIT", 1]]
+2017-01-19T15:51:39.806468+00:00 app[web.1]: D, [2017-01-19T15:51:39.806387 #4] DEBUG -- : [8966097f-e1f4-45d2-aa79-3fcbad905ec3]   SQL (3.1ms)  INSERT INTO "clients" ("test_case_id", "identifier", "secret", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["test_case_id", 1], ["identifier", "5bnoIpi7Zokt"], ["secret", "62fe82e5a3d3a6ef042b10d70b353ef82d2c0010f78eb18502835f17"], ["created_at", 2017-01-19 15:51:39 UTC], ["updated_at", 2017-01-19 15:51:39 UTC]]
+2017-01-19T15:51:39.808522+00:00 app[web.1]: D, [2017-01-19T15:51:39.808443 #4] DEBUG -- : [8966097f-e1f4-45d2-aa79-3fcbad905ec3]    (1.7ms)  COMMIT
+2017-01-19T15:51:39.809492+00:00 app[web.1]: I, [2017-01-19T15:51:39.809414 #4]  INFO -- : [8966097f-e1f4-45d2-aa79-3fcbad905ec3] Redirected to https://rp.certification.openid.net:8080/nov-rp-certified/rp-response_type-code/authorization?client_id=5bnoIpi7Zokt&nonce=67a301099d0c07c372b79ec31ae621ee&redirect_uri=https%3A%2F%2Fconnect-rp-certified.herokuapp.com%2Ftest_case_callbacks%2Frp-response_type-code&response_type=code&scope=profile+email+address+phone+openid&state=376cdb7aba76377274cec4a0fc4302a2
+2017-01-19T15:51:39.809853+00:00 app[web.1]: I, [2017-01-19T15:51:39.809777 #4]  INFO -- : [8966097f-e1f4-45d2-aa79-3fcbad905ec3] Completed 302 Found in 95ms (ActiveRecord: 14.0ms)
+2017-01-19T15:51:39.811434+00:00 heroku[router]: at=info method=GET path="/test_cases/rp-response_type-code" host=connect-rp-certified.herokuapp.com request_id=8966097f-e1f4-45d2-aa79-3fcbad905ec3 fwd="122.210.153.65" dyno=web.1 connect=1ms service=99ms status=302 bytes=1750
+2017-01-19T15:51:40.171137+00:00 app[web.1]: I, [2017-01-19T15:51:40.170971 #4]  INFO -- : [9ec8f2f0-695b-41cb-bf48-7b92a7ed535f] Started GET "/test_case_callbacks/rp-response_type-code?client_id=5bnoIpi7Zokt&iss=https%3A%2F%2Frp.certification.openid.net%3A8080%2Fnov-rp-certified%2Frp-response_type-code&scope=profile+email+address+phone+openid&code=q8ItZ%2BKEEDYxja5u18Db13lVipcbhWaAyyAifL%2FyzGxjdYd9DZ%2FCOAS4V1G1ihbRdtWjoWlTfoWK3H0pGIpHXd7e0iqrImZ4UVnXLNzXFzNKpAAkfUQkV7%2FKpQLXUAnK6wWrP4uKtY%2Fb4ZktRjIlng%3D%3D&state=376cdb7aba76377274cec4a0fc4302a2" for 122.210.153.65 at 2017-01-19 15:51:40 +0000
+2017-01-19T15:51:40.172427+00:00 app[web.1]: I, [2017-01-19T15:51:40.172343 #4]  INFO -- : [9ec8f2f0-695b-41cb-bf48-7b92a7ed535f] Processing by TestCaseCallbacksController#show as HTML
+2017-01-19T15:51:40.172531+00:00 app[web.1]: I, [2017-01-19T15:51:40.172461 #4]  INFO -- : [9ec8f2f0-695b-41cb-bf48-7b92a7ed535f]   Parameters: {"client_id"=>"5bnoIpi7Zokt", "iss"=>"https://rp.certification.openid.net:8080/nov-rp-certified/rp-response_type-code", "scope"=>"profile email address phone openid", "code"=>"q8ItZ+KEEDYxja5u18Db13lVipcbhWaAyyAifL/yzGxjdYd9DZ/COAS4V1G1ihbRdtWjoWlTfoWK3H0pGIpHXd7e0iqrImZ4UVnXLNzXFzNKpAAkfUQkV7/KpQLXUAnK6wWrP4uKtY/b4ZktRjIlng==", "state"=>"376cdb7aba76377274cec4a0fc4302a2", "id"=>"rp-response_type-code"}
+2017-01-19T15:51:40.182969+00:00 app[web.1]: D, [2017-01-19T15:51:40.182840 #4] DEBUG -- : [9ec8f2f0-695b-41cb-bf48-7b92a7ed535f]   TestCase Load (0.8ms)  SELECT  "test_cases".* FROM "test_cases" WHERE "test_cases"."identifier" = $1 LIMIT $2  [["identifier", "rp-response_type-code"], ["LIMIT", 1]]
+2017-01-19T15:51:40.186242+00:00 app[web.1]: D, [2017-01-19T15:51:40.186166 #4] DEBUG -- : [9ec8f2f0-695b-41cb-bf48-7b92a7ed535f]   Client Load (1.0ms)  SELECT  "clients".* FROM "clients" WHERE "clients"."test_case_id" = $1 AND "clients"."identifier" = $2 LIMIT $3  [["test_case_id", 1], ["identifier", "5bnoIpi7Zokt"], ["LIMIT", 1]]
+2017-01-19T15:51:40.187433+00:00 app[web.1]: I, [2017-01-19T15:51:40.187363 #4]  INFO -- : [9ec8f2f0-695b-41cb-bf48-7b92a7ed535f] ======= [SWD] HTTP REQUEST STARTED =======
+2017-01-19T15:51:40.187435+00:00 app[web.1]: GET /nov-rp-certified/rp-response_type-code/.well-known/openid-configuration HTTP/1.1
+2017-01-19T15:51:40.187436+00:00 app[web.1]: Host: rp.certification.openid.net:8080
+2017-01-19T15:51:40.187437+00:00 app[web.1]:
+2017-01-19T15:51:40.187450+00:00 app[web.1]:
+2017-01-19T15:51:40.216662+00:00 app[web.1]: I, [2017-01-19T15:51:40.216551 #4]  INFO -- : [9ec8f2f0-695b-41cb-bf48-7b92a7ed535f] --------------------------------------------------
+2017-01-19T15:51:40.216665+00:00 app[web.1]: Status: 200 OK
+2017-01-19T15:51:40.216666+00:00 app[web.1]: Cache-Control: no-store
+2017-01-19T15:51:40.216667+00:00 app[web.1]: x-ffo: bar
+2017-01-19T15:51:40.216667+00:00 app[web.1]: Content-type: application/json
+2017-01-19T15:51:40.216668+00:00 app[web.1]: Access-Control-Allow-Origin: *
+2017-01-19T15:51:40.216669+00:00 app[web.1]: Access-Control-Allow-Methods: GET
+2017-01-19T15:51:40.216669+00:00 app[web.1]: Access-Control-Allow-Headers: Authorization
+2017-01-19T15:51:40.216670+00:00 app[web.1]: Transfer-Encoding: chunked
+2017-01-19T15:51:40.216671+00:00 app[web.1]: Date: Thu, 19 Jan 2017 15:51:40 GMT
+2017-01-19T15:51:40.216671+00:00 app[web.1]: Server: openid-www2
+2017-01-19T15:51:40.216672+00:00 app[web.1]: Content-Length: 0
+2017-01-19T15:51:40.216672+00:00 app[web.1]:
+2017-01-19T15:51:40.216685+00:00 app[web.1]: {"request_parameter_supported": true, "require_request_uri_registration": true, "response_types_supported": ["code"], "id_token_signing_alg_values_supported": ["RS256", "RS384", "RS512", "ES256", "ES384", "ES512", "HS256", "HS384", "HS512", "PS256", "PS384", "PS512", "none"], "token_endpoint_auth_methods_supported": ["client_secret_post", "client_secret_basic", "client_secret_jwt", "private_key_jwt"], "request_object_encryption_enc_values_supported": ["A128CBC-HS256", "A192CBC-HS384", "A256CBC-HS512", "A128GCM", "A192GCM", "A256GCM"], "response_modes_supported": ["query", "fragment", "form_post"], "jwks_uri": "https://rp.certification.openid.net:8080/static/jwks_f8so7izgQm4vbN6l.json", "userinfo_endpoint": "https://rp.certification.openid.net:8080/nov-rp-certified/rp-response_type-code/userinfo", "request_object_signing_alg_values_supported": ["RS256", "RS384", "RS512", "ES256", "ES384", "ES512", "HS256", "HS384", "HS512", "PS256", "PS384", "PS512", "none"], "userinfo_encryption_enc_values_supported": ["A128CBC-HS256", "A192CBC-HS384", "A256CBC-HS512", "A128GCM", "A192GCM", "A256GCM"], "token_endpoint": "https://rp.certification.openid.net:8080/nov-rp-certified/rp-response_type-code/token", "userinfo_encryption_alg_values_supported": ["RSA1_5", "RSA-OAEP", "A128KW", "A192KW", "A256KW", "ECDH-ES", "ECDH-ES+A128KW", "ECDH-ES+A192KW", "ECDH-ES+A256KW"], "claim_types_supported": ["normal", "aggregated", "distributed"], "id_token_encryption_alg_values_supported": ["RSA1_5", "RSA-OAEP", "A128KW", "A192KW", "A256KW", "ECDH-ES", "ECDH-ES+A128KW", "ECDH-ES+A192KW", "ECDH-ES+A256KW"], "userinfo_signing_alg_values_supported": ["RS256", "RS384", "RS512", "ES256", "ES384", "ES512", "HS256", "HS384", "HS512", "PS256", "PS384", "PS512", "none"], "claims_supported": ["updated_at", "name", "nickname", "sub", "middle_name", "locale", "phone_number_verified", "family_name", "email_verified", "website", "address", "zoneinfo", "email", "given_name", "birthdate", "preferred_username", "profile", "phone_number", "picture", "gender"], "version": "3.0", "claims_parameter_supported": true, "grant_types_supported": ["authorization_code", "implicit", "urn:ietf:params:oauth:grant-type:jwt-bearer"], "request_uri_parameter_supported": true, "subject_types_supported": ["public", "pairwise"], "scopes_supported": ["phone", "email", "offline_access", "openid", "profile", "address", "openid"], "request_object_encryption_alg_values_supported": ["RSA1_5", "RSA-OAEP", "A128KW", "A192KW", "A256KW", "ECDH-ES", "ECDH-ES+A128KW", "ECDH-ES+A192KW", "ECDH-ES+A256KW"], "end_session_endpoint": "https://rp.certification.openid.net:8080/nov-rp-certified/rp-response_type-code/end_session", "registration_endpoint": "https://rp.certification.openid.net:8080/nov-rp-certified/rp-response_type-code/registration", "id_token_encryption_enc_values_supported": ["A128CBC-HS256", "A192CBC-HS384", "A256CBC-HS512", "A128GCM", "A192GCM", "A256GCM"], "token_endpoint_auth_signing_alg_values_supported": ["RS256", "RS384", "RS512", "ES256", "ES384", "ES512", "HS256", "HS384", "HS512", "PS256", "PS384", "PS512"], "issuer": "https://rp.certification.openid.net:8080/nov-rp-certified/rp-response_type-code", "authorization_endpoint": "https://rp.certification.openid.net:8080/nov-rp-certified/rp-response_type-code/authorization", "acr_values_supported": ["PASSWORD"]}
+2017-01-19T15:51:40.216685+00:00 app[web.1]: ======= [SWD] HTTP REQUEST FINISHED =======
+2017-01-19T15:51:40.219349+00:00 app[web.1]: I, [2017-01-19T15:51:40.219277 #4]  INFO -- : [9ec8f2f0-695b-41cb-bf48-7b92a7ed535f] ======= [Rack::OAuth2] HTTP REQUEST STARTED =======
+2017-01-19T15:51:40.219423+00:00 app[web.1]: I, [2017-01-19T15:51:40.219354 #4]  INFO -- : [9ec8f2f0-695b-41cb-bf48-7b92a7ed535f] POST /nov-rp-certified/rp-response_type-code/token HTTP/1.1
+2017-01-19T15:51:40.219424+00:00 app[web.1]: Authorization: Basic NWJub0lwaTdab2t0OjYyZmU4MmU1YTNkM2E2ZWYwNDJiMTBkNzBiMzUzZWY4MmQyYzAwMTBmNzhlYjE4NTAyODM1ZjE3
+2017-01-19T15:51:40.219425+00:00 app[web.1]: Content-Type: application/x-www-form-urlencoded
+2017-01-19T15:51:40.219426+00:00 app[web.1]: Content-Length: 309
+2017-01-19T15:51:40.219426+00:00 app[web.1]: Host: rp.certification.openid.net:8080
+2017-01-19T15:51:40.219427+00:00 app[web.1]:
+2017-01-19T15:51:40.219428+00:00 app[web.1]: grant_type=authorization_code&code=q8ItZ%2BKEEDYxja5u18Db13lVipcbhWaAyyAifL%2FyzGxjdYd9DZ%2FCOAS4V1G1ihbRdtWjoWlTfoWK3H0pGIpHXd7e0iqrImZ4UVnXLNzXFzNKpAAkfUQkV7%2FKpQLXUAnK6wWrP4uKtY%2Fb4ZktRjIlng%3D%3D&redirect_uri=https%3A%2F%2Fconnect-rp-certified.herokuapp.com%2Ftest_case_callbacks%2Frp-response_type-code
+2017-01-19T15:51:40.430792+00:00 app[web.1]: I, [2017-01-19T15:51:40.430667 #4]  INFO -- : [9ec8f2f0-695b-41cb-bf48-7b92a7ed535f] --------------------------------------------------
+2017-01-19T15:51:40.430858+00:00 app[web.1]: I, [2017-01-19T15:51:40.430779 #4]  INFO -- : [9ec8f2f0-695b-41cb-bf48-7b92a7ed535f] Status: 200 OK
+2017-01-19T15:51:40.430860+00:00 app[web.1]: Content-type: application/json
+2017-01-19T15:51:40.430860+00:00 app[web.1]: Access-Control-Allow-Origin: *
+2017-01-19T15:51:40.430861+00:00 app[web.1]: Access-Control-Allow-Methods: GET
+2017-01-19T15:51:40.430862+00:00 app[web.1]: Access-Control-Allow-Headers: Authorization
+2017-01-19T15:51:40.430862+00:00 app[web.1]: Transfer-Encoding: chunked
+2017-01-19T15:51:40.430863+00:00 app[web.1]: Date: Thu, 19 Jan 2017 15:51:40 GMT
+2017-01-19T15:51:40.430863+00:00 app[web.1]: Server: openid-www2
+2017-01-19T15:51:40.430864+00:00 app[web.1]: Content-Length: 0
+2017-01-19T15:51:40.430864+00:00 app[web.1]:
+2017-01-19T15:51:40.430868+00:00 app[web.1]: {"token_type": "Bearer", "scope": "profile email address phone openid", "access_token": "kQwgH65h/4oUOOru2mxRDg+hAFjGRDDUwCcc4IQjYF8+IrCabeGfTIZoE1qF60VPpXHiUJDIox/yaWLHRcPOL5KhNhMF3sitZupt5xad9NFzxWprqqd2l7iTh4Tqc6upwKAHJk5wzv73CfeLGeUhkQ==", "state": "376cdb7aba76377274cec4a0fc4302a2", "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImJfRGxmVk5CbWdHSFViekxmYzNKa1I5SUpJTmNZZ2NRN01yZ0hmUkxhcDAifQ.eyJpc3MiOiAiaHR0cHM6Ly9ycC5jZXJ0aWZpY2F0aW9uLm9wZW5pZC5uZXQ6ODA4MC9ub3YtcnAtY2VydGlmaWVkL3JwLXJlc3BvbnNlX3R5cGUtY29kZSIsICJpYXQiOiAxNDg0ODQxMTAwLCAibm9uY2UiOiAiNjdhMzAxMDk5ZDBjMDdjMzcyYjc5ZWMzMWFlNjIxZWUiLCAic3ViIjogIjFiMmZjOTM0MWExNmFlNGUzMDA4Mjk2NWQ1MzdhZTQ3YzIxYTBmMjdmZDQzZWFiNzgzMzBlZDgxNzUxYWU2ZGIiLCAiYWNyIjogIlBBU1NXT1JEIiwgImF1ZCI6IFsiNWJub0lwaTdab2t0Il0sICJleHAiOiAxNDg0OTI3NTAwLCAiYXV0aF90aW1lIjogMTQ4NDg0MTA5OX0.OzZgdlnEZ4vJARCfASu0Y2r9pnMpUShx8sU3BePln4Zs5e0u80R-wdNPO17z78KAeNhj_9AWDhVeDh-yFbwfU9U-yp_IluWERke3b4dXuAXN3Q2AB-15BTppFm390pCa47pJQmCaen8m-lVOd0IC70pveWzrn86zXNiB7qCowsBss1wHn9UlVgNXtBy7tH1F3VFvb7JOhiMFy6MeCwddMA0e8rEDwfrdBEWgOfhFXlvgFHM4fAahrT73rKIhY_hBCtDf1lSZdng4zJyAQypA7SFB0ii3XZilcPkrdY5sLSbeRzJj2Fw74DIU0bIKKtuSzStdXBeg6X2l_2-uN_Bw3A"}
+2017-01-19T15:51:40.430925+00:00 app[web.1]: I, [2017-01-19T15:51:40.430860 #4]  INFO -- : [9ec8f2f0-695b-41cb-bf48-7b92a7ed535f] ======= [Rack::OAuth2] HTTP REQUEST FINISHED =======
+2017-01-19T15:51:40.432060+00:00 app[web.1]: I, [2017-01-19T15:51:40.431991 #4]  INFO -- : [9ec8f2f0-695b-41cb-bf48-7b92a7ed535f] ======= [OpenIDConnect] HTTP REQUEST STARTED =======
+2017-01-19T15:51:40.432126+00:00 app[web.1]: I, [2017-01-19T15:51:40.432063 #4]  INFO -- : [9ec8f2f0-695b-41cb-bf48-7b92a7ed535f] GET /static/jwks_f8so7izgQm4vbN6l.json HTTP/1.1
+2017-01-19T15:51:40.432128+00:00 app[web.1]: Host: rp.certification.openid.net:8080
+2017-01-19T15:51:40.432128+00:00 app[web.1]:
+2017-01-19T15:51:40.432129+00:00 app[web.1]:
+2017-01-19T15:51:40.485642+00:00 app[web.1]: I, [2017-01-19T15:51:40.485512 #4]  INFO -- : [9ec8f2f0-695b-41cb-bf48-7b92a7ed535f] --------------------------------------------------
+2017-01-19T15:51:40.485701+00:00 app[web.1]: I, [2017-01-19T15:51:40.485632 #4]  INFO -- : [9ec8f2f0-695b-41cb-bf48-7b92a7ed535f] Status: 200 OK
+2017-01-19T15:51:40.485702+00:00 app[web.1]: Content-type: text/html
+2017-01-19T15:51:40.485703+00:00 app[web.1]: Access-Control-Allow-Origin: *
+2017-01-19T15:51:40.485704+00:00 app[web.1]: Access-Control-Allow-Methods: GET
+2017-01-19T15:51:40.485705+00:00 app[web.1]: Access-Control-Allow-Headers: Authorization
+2017-01-19T15:51:40.485705+00:00 app[web.1]: Transfer-Encoding: chunked
+2017-01-19T15:51:40.485706+00:00 app[web.1]: Date: Thu, 19 Jan 2017 15:51:40 GMT
+2017-01-19T15:51:40.485706+00:00 app[web.1]: Server: openid-www2
+2017-01-19T15:51:40.485707+00:00 app[web.1]: Content-Length: 0
+2017-01-19T15:51:40.485708+00:00 app[web.1]:
+2017-01-19T15:51:40.485709+00:00 app[web.1]: {"keys": [{"kty": "RSA", "e": "AQAB", "n": "qAEO5HN-iXYser8joW8u2Uhegg0egZ0Y1bk_WNt4NKrQJbMdf5o7Kl6eRIQ9oQfR5e7b6oUSwHtngNd3o1KZHKzyxPYp72i9HCKKxZPvnC7_1xNhBvqR3cjSogPDhBxtiho2vtgPxmhQOjtjV3yS-Ik8twPUSwfY1GxLZjeXeIXCLrd-3hFKgeoOcwENvaolTTUf9CxIfpKk0s95B1V8mLFvjVqT7ftn84VQdf88kwBTEIThRlM9Ot00NoNgbitmf95xj8sMera-ZT2zBElBnlMFiLN_bHuADQROimy-iGfhqpH3d_tWaAtXZFCJ7OY6CDPVQZ9fKSjmLeeDOyFR_Q", "kid": "48Afw-zz40sUw6Uj8ZCsfqnm0q9Bq3bK9yYcozi50Zw", "use": "enc"}, {"kty": "RSA", "e": "AQAB", "n": "tR3l3Oc1_sNfRbHp_BIjh52bL8o4-S21GlRAhRb0vSdnfIFWJKM6SRPtZh96ShDdWja-lZC7f2rqK1iNVsEi5FYcRcEUN5-wcZimoee7jo_DzFozRhqu2x57Y2YGE-b1GhgyM6PjLd8NMoU60eQ7SHACuJj_2ewtK-ffNuxCnyK9O_TMq-vi4OUousQXDJxaOrHnVYZvxGBtwgM-oGWF2o0VOAS9A8RRT-1SpIwcnNRrg_hUtCh3W-epzb_Hm5fBsA6YBmTc2cHIqDwq0ue8T3WM7NKX7Wg-FcZFV4IJOzkJ8KYDbTqDBjiiygYUVKTQl4WdIm9ova-Fblo8iceiOw", "kid": "b_DlfVNBmgGHUbzLfc3JkR9IJINcYgcQ7MrgHfRLap0", "use": "sig"}, {"y": "ZV-Qv-l0W4x6bRtZpY9nbtfB16IsbZgD_s1Ij0tzzqw", "x": "gbXzgi85BLLirjFbjdYU4xqvodAKOnPThlXE1I0h_q4", "kty": "EC", "crv": "P-256", "kid": "CzHDxT2OrV2yblaTU_M1T-FfYbLIlsyvSNJORAycY_Q", "use": "sig"}, {"y": "iq4cg4edBnFiCRQ8dtSPLpq76h7mO1Z3imKAwPYToQ", "x": "eS0QXtIGq1ri29CtaSa5PD8PBkGL3domM70f3YO-vaU", "kty": "EC", "crv": "P-256", "kid": "jctMt0kDRN2mxEszSTvfw1DqpESssVWnZo24vQQMjDc", "use": "enc"}]}
+2017-01-19T15:51:40.485758+00:00 app[web.1]: I, [2017-01-19T15:51:40.485702 #4]  INFO -- : [9ec8f2f0-695b-41cb-bf48-7b92a7ed535f] ======= [OpenIDConnect] HTTP REQUEST FINISHED =======
+2017-01-19T15:51:40.487058+00:00 app[web.1]: I, [2017-01-19T15:51:40.486993 #4]  INFO -- : [9ec8f2f0-695b-41cb-bf48-7b92a7ed535f] ======= [Rack::OAuth2] HTTP REQUEST STARTED =======
+2017-01-19T15:51:40.487112+00:00 app[web.1]: I, [2017-01-19T15:51:40.487059 #4]  INFO -- : [9ec8f2f0-695b-41cb-bf48-7b92a7ed535f] GET /nov-rp-certified/rp-response_type-code/userinfo? HTTP/1.1
+2017-01-19T15:51:40.487114+00:00 app[web.1]: Authorization: Bearer kQwgH65h/4oUOOru2mxRDg+hAFjGRDDUwCcc4IQjYF8+IrCabeGfTIZoE1qF60VPpXHiUJDIox/yaWLHRcPOL5KhNhMF3sitZupt5xad9NFzxWprqqd2l7iTh4Tqc6upwKAHJk5wzv73CfeLGeUhkQ==
+2017-01-19T15:51:40.487115+00:00 app[web.1]: Host: rp.certification.openid.net:8080
+2017-01-19T15:51:40.487115+00:00 app[web.1]:
+2017-01-19T15:51:40.487116+00:00 app[web.1]:
+2017-01-19T15:51:40.875548+00:00 heroku[router]: at=info method=GET path="/test_case_callbacks/rp-response_type-code?client_id=5bnoIpi7Zokt&iss=https%3A%2F%2Frp.certification.openid.net%3A8080%2Fnov-rp-certified%2Frp-response_type-code&scope=profile+email+address+phone+openid&code=q8ItZ%2BKEEDYxja5u18Db13lVipcbhWaAyyAifL%2FyzGxjdYd9DZ%2FCOAS4V1G1ihbRdtWjoWlTfoWK3H0pGIpHXd7e0iqrImZ4UVnXLNzXFzNKpAAkfUQkV7%2FKpQLXUAnK6wWrP4uKtY%2Fb4ZktRjIlng%3D%3D&state=376cdb7aba76377274cec4a0fc4302a2" host=connect-rp-certified.herokuapp.com request_id=9ec8f2f0-695b-41cb-bf48-7b92a7ed535f fwd="122.210.153.65" dyno=web.1 connect=0ms service=713ms status=200 bytes=5279
+2017-01-19T15:51:40.864812+00:00 app[web.1]: I, [2017-01-19T15:51:40.864640 #4]  INFO -- : [9ec8f2f0-695b-41cb-bf48-7b92a7ed535f] --------------------------------------------------
+2017-01-19T15:51:40.864880+00:00 app[web.1]: I, [2017-01-19T15:51:40.864809 #4]  INFO -- : [9ec8f2f0-695b-41cb-bf48-7b92a7ed535f] Status: 200 OK
+2017-01-19T15:51:40.864882+00:00 app[web.1]: Content-type: application/json
+2017-01-19T15:51:40.864882+00:00 app[web.1]: Access-Control-Allow-Origin: *
+2017-01-19T15:51:40.864883+00:00 app[web.1]: Access-Control-Allow-Methods: GET
+2017-01-19T15:51:40.864884+00:00 app[web.1]: Access-Control-Allow-Headers: Authorization
+2017-01-19T15:51:40.864884+00:00 app[web.1]: Transfer-Encoding: chunked
+2017-01-19T15:51:40.864885+00:00 app[web.1]: Date: Thu, 19 Jan 2017 15:51:40 GMT
+2017-01-19T15:51:40.864885+00:00 app[web.1]: Server: openid-www2
+2017-01-19T15:51:40.864886+00:00 app[web.1]: Content-Length: 0
+2017-01-19T15:51:40.864887+00:00 app[web.1]:
+2017-01-19T15:51:40.864890+00:00 app[web.1]: {"name": "Diana Krall", "nickname": "Dina", "sub": "1b2fc9341a16ae4e30082965d537ae47c21a0f27fd43eab78330ed81751ae6db", "email": "diana@example.org", "given_name": "Diana", "family_name": "Krall", "email_verified": false, "phone_number": "+46 90 7865000", "address": {"locality": "Ume\u00e5", "postal_code": "SE-90187", "country": "Sweden", "street_address": "Ume\u00e5 Universitet"}}
+2017-01-19T15:51:40.864957+00:00 app[web.1]: I, [2017-01-19T15:51:40.864887 #4]  INFO -- : [9ec8f2f0-695b-41cb-bf48-7b92a7ed535f] ======= [Rack::OAuth2] HTTP REQUEST FINISHED =======
+2017-01-19T15:51:40.866951+00:00 app[web.1]: I, [2017-01-19T15:51:40.866874 #4]  INFO -- : [9ec8f2f0-695b-41cb-bf48-7b92a7ed535f]   Rendering test_case_callbacks/show.html.erb within layouts/popup
+2017-01-19T15:51:40.867489+00:00 app[web.1]: I, [2017-01-19T15:51:40.867414 #4]  INFO -- : [9ec8f2f0-695b-41cb-bf48-7b92a7ed535f]   Rendered test_case_callbacks/show.html.erb within layouts/popup (0.4ms)
+2017-01-19T15:51:40.868901+00:00 app[web.1]: I, [2017-01-19T15:51:40.868824 #4]  INFO -- : [9ec8f2f0-695b-41cb-bf48-7b92a7ed535f]   Rendered layouts/_wrapper.html.erb (1.1ms)
+2017-01-19T15:51:40.869259+00:00 app[web.1]: I, [2017-01-19T15:51:40.869191 #4]  INFO -- : [9ec8f2f0-695b-41cb-bf48-7b92a7ed535f] Completed 200 OK in 697ms (Views: 2.6ms | ActiveRecord: 1.8ms)
