@@ -1,8 +1,9 @@
 #footer {
   padding-bottom: 2em !important;
+  position: relative;
   .certification_mark {
     img {
-      position: fixed;
+      position: absolute;
       bottom: 20px;
       right: 20px;
       height: 40px;
