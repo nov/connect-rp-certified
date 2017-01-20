@@ -64,11 +64,9 @@
       <footer id="footer">
         <div class="inner">
           <% if Rails.application.config.rp_ceritification[:certified] %>
-            <%= link_to 'http://openid.net/certification/' do %>
-              <span class="certification_mark">
-                <%= image_tag 'certification_mark.png' %>
-              </span>
-            <% end %>
+            <div class="certification_mark">
+              <%= link_to image_tag('certification_mark.png'), 'http://openid.net/certification/' %>
+            </div>
           <% end %>
           <% if local_assigns[:with_social_icons] %>
             <ul class="icons">
