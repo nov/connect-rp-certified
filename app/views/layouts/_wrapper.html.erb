@@ -37,8 +37,8 @@
         <nav id="menu">
           <h2>RP Certification</h2>
           <ul>
-            <li><%= link_to 'Certified RPs', 'http://openid.net/certification/' %></li>
-            <li><%= link_to 'Conformance Test Instructions', 'http://openid.net/certification/rp_testing/' %></li>
+            <li><%= link_to 'Certified RPs', 'http://oixnet.org/openid-certifications/' %></li>
+            <li><%= link_to 'Conformance Test Instructions', 'https://openid.net/certification/rp_testing/' %></li>
             <li><%= link_to 'Conformance Test Profiles', Rails.application.config.rp_ceritification[:idp_base_url] %></li>
             <li><%= link_to 'Conformance Test Logs', File.join(Rails.application.config.rp_ceritification[:idp_base_url], 'log', Rails.application.config.rp_ceritification[:rp_identifier]) %></li>
           </ul>
@@ -65,7 +65,7 @@
         <div class="inner">
           <% if Rails.application.config.rp_ceritification[:certified] %>
             <div class="certification_mark">
-              <%= link_to image_tag('certification_mark.png'), 'http://openid.net/certification/' %>
+              <%= link_to image_tag('certification_mark.png'), 'http://oixnet.org/openid-certifications/nov-matake/' %>
             </div>
           <% end %>
           <% if local_assigns[:with_social_icons] %>
