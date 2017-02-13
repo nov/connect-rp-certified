@@ -1,0 +1,19 @@
+version: '2'
+services:
+  web:
+    build: .
+    command: bundle exec rails s -p 3000 -b 0.0.0.0
+    ports:
+      - 3000:3000
+    stdin_open: true
+    tty: true
+    environment:
+      RP_IDENTIFIER: rp-certified
+    volumes:
+      - .:/app
+    volumes_from:
+      - bundle
+  bundle:
+    image: busybox
+    volumes:
+      - /bundle
