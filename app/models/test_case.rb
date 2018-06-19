@@ -22,7 +22,8 @@ class TestCase < ApplicationRecord
       config.registration_endpoint,
       client_name:      "NOV RP - #{identifier}",
       application_type: 'web',
-      redirect_uris:    [options[:redirect_uri]]
+      redirect_uris:    [options[:redirect_uri]],
+      contacts:         ['nov@matake.jp']
     ).register!
     client = clients.create!(
       identifier: client.identifier,
