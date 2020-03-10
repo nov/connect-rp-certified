@@ -72,11 +72,11 @@ class TestCase < ApplicationRecord
         end
         case jwks_selected.size
         when 0
-          raise JSON::JWK::Set::KidNotFound, "No keys are found for kyt=#{expected_kty} & use=sig"
+          raise JSON::JWK::Set::KidNotFound, "No keys are found for kty=#{expected_kty} & use=sig"
         when 1
           jwks_selected.first
         else
-          raise JSON::JWK::Set::KidNotFound, "Multiple keys are found for kyt=#{expected_kty} & use=sig"
+          raise JSON::JWK::Set::KidNotFound, "Multiple keys are found for kty=#{expected_kty} & use=sig"
         end
       end
       OpenIDConnect::ResponseObject::IdToken.decode id_token_string, jwk_or_jwks
